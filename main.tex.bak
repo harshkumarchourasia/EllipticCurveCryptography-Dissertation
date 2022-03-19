@@ -74,8 +74,7 @@ of Mathematics, Indian Institute of Technology Roorkee for his guidance through 
 	\pagenumbering{arabic}
 	
 	\chapter{Pre-requisite}
-	This chapter covers topics of Abstact Algebra and Number Theory that are required for cryprography and elliptic curves.\\
-	 This defination of Group, Ring, Field are as follows
+	This chapter covers topics of Abstact Algebra and Number Theory that are required for cryprography and elliptic curves. This chapters starts with the defination of Group, Ring, Field.
 	\section{Group}
 	The set  $G$ is equipped with  single operation $*$ such the the $4$ below properties are satisfied is called a Group.\\
 	$(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\

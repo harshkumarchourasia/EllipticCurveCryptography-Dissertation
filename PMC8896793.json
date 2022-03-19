@@ -1,0 +1,77 @@
+{
+    "source": "PubMed",
+    "accessed": {
+        "date-parts": [
+            [
+                2022,
+                3,
+                18
+            ]
+        ]
+    },
+    "id": "pmid:35245111",
+    "title": "Cell type-specific mechanism of Setd1a heterozygosity in schizophrenia pathogenesis",
+    "author": [
+        {
+            "family": "Chen",
+            "given": "Renchao"
+        },
+        {
+            "family": "Liu",
+            "given": "Yiqiong"
+        },
+        {
+            "family": "Djekidel",
+            "given": "Mohamed N"
+        },
+        {
+            "family": "Chen",
+            "given": "Wenqiang"
+        },
+        {
+            "family": "Bhattacherjee",
+            "given": "Aritra"
+        },
+        {
+            "family": "Chen",
+            "given": "Zhiyuan"
+        },
+        {
+            "family": "Scolnick",
+            "given": "Ed"
+        },
+        {
+            "family": "Zhang",
+            "given": "Yi"
+        }
+    ],
+    "container-title-short": "Sci Adv",
+    "container-title": "Science advances",
+    "publisher": "American Association for the Advancement of Science",
+    "ISSN": "2375-2548",
+    "issued": {
+        "date-parts": [
+            [
+                2022,
+                3,
+                4
+            ]
+        ]
+    },
+    "epub-date": {
+        "date-parts": [
+            [
+                2022,
+                3,
+                4
+            ]
+        ]
+    },
+    "page": "eabm1077",
+    "volume": "8",
+    "issue": "9",
+    "PMID": "35245111",
+    "PMCID": "PMC8896793",
+    "DOI": "10.1126/sciadv.abm1077",
+    "type": "article-journal"
+}
