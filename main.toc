@@ -7,16 +7,16 @@
 \contentsline {section}{\numberline {1.2}Ring}{3}{}%
 \contentsline {section}{\numberline {1.3}Field}{3}{}%
 \contentsline {section}{\numberline {1.4}Fermat’s little theorem}{3}{}%
-\contentsline {chapter}{\numberline {2}Elliptic Curves and Cryptography}{4}{}%
-\contentsline {section}{\numberline {2.1}Introduction to Cryptography}{4}{}%
-\contentsline {subsection}{\numberline {2.1.1}Symmetric ciphers}{4}{}%
-\contentsline {subsection}{\numberline {2.1.2}Asymmetric ciphers}{5}{}%
-\contentsline {section}{\numberline {2.2}Elliptic Curves}{5}{}%
-\contentsline {section}{\numberline {2.3}Elliptic Curves over Finite Field}{5}{}%
-\contentsline {section}{\numberline {2.4}Discrete Logarithm problem}{5}{}%
-\contentsline {subsection}{\numberline {2.4.1}The elliptic curve discrete logarithm \\ problem}{5}{}%
-\contentsline {subsection}{\numberline {2.4.2}Double and add algorithm}{5}{}%
-\contentsline {subsection}{\numberline {2.4.3}How hard is the ECDLP?}{5}{}%
-\contentsline {section}{\numberline {2.5}Elliptic curve cryptography}{5}{}%
-\contentsline {section}{\numberline {2.6}Diﬃe–Hellman}{5}{}%
-\contentsline {subsection}{\numberline {2.6.1}Diﬃe–Hellman key exchange}{5}{}%
+\contentsline {chapter}{\numberline {2}Elliptic Curves and Cryptography}{5}{}%
+\contentsline {section}{\numberline {2.1}Introduction to Cryptography}{5}{}%
+\contentsline {subsection}{\numberline {2.1.1}Symmetric cryptography}{6}{}%
+\contentsline {subsection}{\numberline {2.1.2}Asymmetric cryptography}{6}{}%
+\contentsline {section}{\numberline {2.2}Elliptic Curves}{7}{}%
+\contentsline {section}{\numberline {2.3}Elliptic Curves over Finite Field}{8}{}%
+\contentsline {section}{\numberline {2.4}Discrete Logarithm problem}{8}{}%
+\contentsline {subsection}{\numberline {2.4.1}The elliptic curve discrete logarithm \\ problem}{8}{}%
+\contentsline {subsection}{\numberline {2.4.2}Double and add algorithm}{8}{}%
+\contentsline {subsection}{\numberline {2.4.3}How hard is the ECDLP?}{8}{}%
+\contentsline {section}{\numberline {2.5}Elliptic curve cryptography}{8}{}%
+\contentsline {section}{\numberline {2.6}Diﬃe–Hellman}{8}{}%
+\contentsline {subsection}{\numberline {2.6.1}Diﬃe–Hellman key exchange}{8}{}%

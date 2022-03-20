@@ -1,5 +1,8 @@
 \documentclass[12pt,a4paper]{report}
 \usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
 \begin{document}
 
 %TITLE PAGE
@@ -109,15 +112,77 @@ of Mathematics, Indian Institute of Technology Roorkee for his guidance through 
 	$$x*(y+z)=x*y+x*z$$ $$(x+y)*z=x*z+y*z$$\\
 	
 	\section{Fermat’s little theorem}
+	Theorem: Let p be any prime number. For any number a such that $p\nmid a$. Then  
+$a^{p-1}\equiv 1\pmod p$\\\\
+	Proof: Assume p is a prime number and $p \nmid a$ \\
+	Every integer is congruent to one of $0,1,2,\cdots,p-1\pmod p$\\
+	Only focus on non zero congurence classes, because $0 \pmod p$ contains all the multiples of p (and $p \nmid a$).
+	Focus on $0,1,2,\cdots,p-1$\\
+	Multiply all of these by a:
+	$$a,2a,\cdots,(p-1)a$$
+	Show that this is a rearrangement of $0,1,2,\cdots,p-1$\\
+	Case 1: None of these are congruent to 0.\\
+	Suppose $r.a\equiv 0 \pmod p$\\
+	Then $p\nmid r.a$, but this is impossible since $p\nmid a$ and $r<p$\\
+	Case 2: These are distinct, no two are congruent to each other.\\
+	Pick two values $r.a$,$s.a$\\
+	$$0<r<p$$
+	$$0<s<p$$
+	Let's show that $r.a \not\equiv s.a \pmod p$\\
+	So look at $r.a-s.a=(r-s).a$. As $p\nmid a$, so can $p \mid (r-s)?$\\
+	$$0<r<p$$
+	$$-p<-s<0$$
+	Adding these inequalities gives you:
+	$$-p<r-s<p$$ 
+	So, $p\nmid(r-s)$ which means $a,2a,\cdots,(p-1)a$ is a rearranement of\\ $1,2,\cdots,(p-1).$
+		$$a,2a,\cdots,(p-1)a\equiv 1,2,\cdots,(p-1) \pmod p$$
+		$$(p-1)!a^{p-1}\equiv (p-1)! \pmod p$$
+		$$a^{p-1}\equiv 1 \pmod p$$
+		
+	
 	
 	\cleardoublepage	
 
 	\chapter{Elliptic Curves and Cryptography}
 	\section{Introduction to Cryptography}
-	\subsection{Symmetric ciphers}
-	Let Alice want to share a message m with Bob. They do so by using a common key and knowledge of some algorithm to encrypt and decrypt message. Alice encrypts the message using the key to produce the cipher text. Now Bob can use key with cipher text to decrypt message.  
-	\subsection{Asymmetric ciphers} 
+	According to Wikipedia, \textbf{Cryptography, or cryptology is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
+	\\Some of the application of Cryptography includes:
+	\begin{itemize}
+  \item End-to-end Encryption for e-mail, messaging apps, GSM phones.
+  \item Storing Data: Biggest consumer application of cryptography includes Kindle, iPod which stores books and songs in encrypted format to protect copyright.
+  \item Storing Password: Storing passwords in plane text is not secure. If an attacker has access to the system they can read the password. If the password is conveted into hash using one way mapping function and stored. Everytime a user logs in, the password will be converted into hash and compared with the stored password.
+\end{itemize}
+There are mainly two type of crpytography: Symmeteric key cryptography and Asymmeteric key crpytography. 	
+\cleardoublepage
+
+	
+	\subsection{Symmetric cryptography}
+	Let Alice want to share a message m with Bob. They do so by using a common key and knowledge of some algorithm to encrypt and decrypt message. Alice encrypts the message using the key to produce the cipher text. Now Bob can use key with cipher text to decrypt message.  \\\\
+	\includegraphics[scale=0.4]{sym}
+	\subsection{Asymmetric cryptography}
+	Asymetric cryptography works by using private and public key pairs.
+	Each user has a private,public key pair. Public key can be shared freely across the network and is used to verify the owner of a message.
+	Private keys is not transmitted across the network. Private are used to encrypt the message. The major advantage of asymmeteric cryptography is that there is no need of a shared key. 
+	\cleardoublepage	
 	\section{Elliptic Curves}
+Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equations. It is named after Karl Weierstrass $(1815-1897)$ who studied them in $19^{th}$ century. \\
+Defination:Elliptic curves are solution sets of Weierstrass equations$$E:y^2 = x^3+ax+b$$ where $\Delta_E = 4a^3+27b^2\neq 0$ \\
+$\Delta_E \neq 0$ gurantees that the equation $x^3+ax+b$ has no repeated roots i.e. 
+
+$ x^3+ax+b=(x-e_1)(x-e_2)(x-e_3)$ where $e_1,e_2,e_3$ are distinct
+
+Example:
+
+$y^2 = x^3-3x+3$ over $\mathbb{R}$
+
+\includegraphics[scale=0.3]{graph_ex1}
+
+E: $y^2 = x^3+3x+8$ over $\mathbb{Z}/13\mathbb{Z}$\\
+Solution is  $O,(1,5),(1,8),(2,3),(2,10),(9,6),(9,7),(12,2),(12,11)$ 
+
+
+
+
 	\section{Elliptic Curves over Finite Field}
 	\section{Discrete Logarithm problem}
 	\subsection{The elliptic curve discrete logarithm \\ problem}
@@ -126,7 +191,7 @@ of Mathematics, Indian Institute of Technology Roorkee for his guidance through 
 	\section{Elliptic curve cryptography}
 	\section{Diﬃe–Hellman}
 	\subsection{Diﬃe–Hellman key exchange}
-	\cleardoublepage	
+	\cleardoublepage
 	
 
 	\cite{hoffstein2008introduction}
