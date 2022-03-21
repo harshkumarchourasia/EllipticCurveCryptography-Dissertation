@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.18)  20 MAR 2022 19:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.18)  21 MAR 2022 23:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -118,6 +118,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count198
@@ -155,42 +159,8 @@ LaTeX Font Info:    ... okay on input line 6.
 \everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -204,21 +174,67 @@ Package pdftex.def Info: logo.png  used on input line 28.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.png>] [1]
-[2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 46--53
 
-] [3
+ []
 
-] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--53
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 54
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 66--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--77
+
+ []
+
+[1] [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 89--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--98
+
+ []
+
+[3
+
+] (./main.toc)
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
@@ -232,24 +248,14 @@ Chapter 1.
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--122
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--129
+Underfull \hbox (badness 10000) in paragraph at lines 151--158
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
 
  []
 
@@ -262,35 +268,85 @@ Chapter 2.
 <sym.png, id=46, 1181.41376pt x 409.53pt>
 File: sym.png Graphic file (type png)
 <use sym.png>
-Package pdftex.def Info: sym.png  used on input line 161.
+Package pdftex.def Info: sym.png  used on input line 190.
 (pdftex.def)             Requested size: 472.55713pt x 163.80908pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
 
  []
 
 
-Overfull \hbox (82.55713pt too wide) in paragraph at lines 160--162
+Overfull \hbox (82.55713pt too wide) in paragraph at lines 189--191
 [] 
  []
 
 [6
 
  <./sym.png>]
-<graph_ex1.png, id=52, 719.68875pt x 607.26875pt>
-File: graph_ex1.png Graphic file (type png)
-<use graph_ex1.png>
-Package pdftex.def Info: graph_ex1.png  used on input line 178.
-(pdftex.def)             Requested size: 215.9083pt x 182.18202pt.
- [7
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+99.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 199.
+<Figure_1.png, id=52, 685.1196pt x 690.9012pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 202.
+(pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
+<Figure_2.png, id=53, 685.1196pt x 690.9012pt>
+File: Figure_2.png Graphic file (type png)
+<use Figure_2.png>
+Package pdftex.def Info: Figure_2.png  used on input line 203.
+(pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
+<Figure_3.png, id=54, 685.1196pt x 690.9012pt>
+File: Figure_3.png Graphic file (type png)
+<use Figure_3.png>
+Package pdftex.def Info: Figure_3.png  used on input line 204.
+(pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
+<Figure_4.png, id=55, 685.1196pt x 690.9012pt>
+File: Figure_4.png Graphic file (type png)
+<use Figure_4.png>
+Package pdftex.def Info: Figure_4.png  used on input line 205.
+(pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
 
- <./graph_ex1.png>] [8]
+Overfull \hbox (51.09659pt too wide) in paragraph at lines 199--208
+[] [] 
+ []
 
-LaTeX Warning: Citation `hoffstein2008introduction' on page 9 undefined on inpu
-t line 197.
+
+Overfull \hbox (51.09659pt too wide) in paragraph at lines 199--208
+[] []
+ []
+
+[7
+
+ <./Figure_1.png> <./Figure_2.png> <./Figure_3.png> <./Figure_4.png>]
+<2.png, id=64, 583.17876pt x 585.18625pt>
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 211.
+(pdftex.def)             Requested size: 233.26736pt x 234.07034pt.
+<3.png, id=65, 709.65125pt x 589.20125pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 215.
+(pdftex.def)             Requested size: 283.85547pt x 235.67632pt.
+
+[8 <./2.png>]
+<1.png, id=71, 581.17125pt x 584.1825pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 220.
+(pdftex.def)             Requested size: 232.46437pt x 233.66885pt.
+ [9 <./3.png> <./1.png>] [10]
+
+LaTeX Warning: Citation `hoffstein2008introduction' on page 11 undefined on inp
+ut line 242.
 
 No file main.bbl.
-[9
+[11
 
 ] (./main.aux)
 
@@ -298,13 +354,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2902 strings out of 481209
- 40230 string characters out of 5914747
- 316671 words of memory out of 5000000
- 19812 multiletter control sequences out of 15000+600000
- 412087 words of font info for 58 fonts, out of 8000000 for 9000
+ 2495 strings out of 481209
+ 33153 string characters out of 5914747
+ 306541 words of memory out of 5000000
+ 19422 multiletter control sequences out of 15000+600000
+ 412581 words of font info for 61 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 72i,5n,78p,356b,156s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,7n,74p,357b,176s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/harsh/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600
 pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sh
@@ -315,11 +371,12 @@ st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb>
-Output written on main.pdf (14 pages, 204401 bytes).
+nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/r
+sfs10.pfb>
+Output written on main.pdf (16 pages, 376533 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
