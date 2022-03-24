@@ -78,7 +78,7 @@ Place:\\
 %ABSTRACT PAGE
 \section*{Abstract}
 \addcontentsline{toc}{section}{\numberline{}Abstract}
-This text discuss about Cryptography using Elliptic Curves. It has many practical applications end-to-end encryption, data and password storing, cryptocurrencies
+This text discuss about Cryptography using Elliptic Curves. It has many practical applications in end-to-end encryption, data and password storing, cryptocurrencies. The motive behind this dissertation is to understand in depth how cryptography is applied in modern technologies such as blockchain which is driving force behind financial revolution of $21^{st}$ century. This dissertation is divided into two chapters. The first chapter deals with the pre-requisite from abstract algebra and number theory that is required to study elliptic curve cryptography. The second chaptes deals with the introduction and algorithms of elliptic curve cryptography.
 \cleardoublepage
 %ACKNNOWEDGMENTS PAGE	
 \section*{Acknowledgments}
@@ -174,7 +174,8 @@ $$a^{p-1}\equiv 1 \pmod p$$
 
 \chapter{Elliptic Curves and Cryptography}
 \section{Introduction to Cryptography}
-According to Wikipedia, \textbf{Cryptography, or cryptology is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
+The written word is the most important invention in human history. But as long as human has the ability to share information, they have also had the need to conceal that information as well. This need lead to invention of cryptography.\\
+The word cryptography comes from greek which means "hidden writing". According to Wikipedia, \textbf{Cryptography, or cryptology is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
 \\Some of the application of Cryptography includes:
 \begin{itemize}
 	\item End-to-end Encryption for e-mail, messaging apps, GSM phones.
@@ -186,39 +187,74 @@ There are mainly two type of cryptography: Symmetric key cryptography and Asymme
 
 	
 \subsection{Symmetric cryptography}
-Let Alice want to share a message m with Bob. They do so by using a common key and knowledge of some algorithm to encrypt and decrypt message. Alice encrypts the message using the key to produce the cipher text. Now Bob can use key with cipher text to decrypt message.  \\\\
-\includegraphics[scale=0.4]{sym}
+Let Alice want to share a message m with Bob. They do so by using a common key and knowledge of some algorithm to encrypt and decrypt message. Alice encrypts the message using the key to produce the cipher text. Now Bob can use key with cipher text to decrypt message. 
+
+In symmetric cryptography a common key is used by the sender and receiver. 
+\vspace{2cm}
+
+\begin{figure}[h!]
+\begin{center}
+ \caption{A picture of the universe!}
+\includegraphics[scale=0.36]{sym}
+\end{center}
+\end{figure}
+
+\vspace{2cm}
 \subsection{Asymmetric cryptography}
 Asymmetric cryptography works by using private and public key pairs.
 Each user has a private,public key pair. Public key can be shared freely across the network and is used to verify the owner of a message.
-Private keys is not transmitted across the network. Private are used to encrypt the message. The major advantage of asymmetric cryptography is that there is no need of a shared key. 
-\cleardoublepage	
+Private keys is not transmitted across the network. Public are used to encrypt the message and private key is used to decrypt the message. The major advantage of asymmetric cryptography is that there is no need of a shared key. \\
+
+\begin{figure}[h!]
+\begin{center}
+\caption{A message exchange using private and public keys}
+\includegraphics[scale=0.36]{asym}
+\end{center}
+\end{figure}
+
+	
 \section{Elliptic Curves}
 Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equations. It is named after Karl Weierstrass $(1815-1897)$ who studied them in $19^{th}$ century. \\
 Definition:Elliptic curves are solution sets of Weierstrass equations
 $$E:y^2 = x^3+ax+b ...(1)$$ with  $ \{\ \mathscr{O}  $ \}\ where $\Delta_E = 4a^3+27b^2\neq 0$. 
 $\Delta_E \neq 0$ guarantees that the equation $x^3+ax+b$ has no repeated roots i.e. 
-$ x^3+ax+b=(x-e_1)(x-e_2)(x-e_3)$ where $e_1,e_2,e_3$ are distinct\\
+$ x^3+ax+b=(x-e_1)(x-e_2)(x-e_3)$ where $e_1,e_2,e_3$ are distinct. $  \mathscr{O}  $  is defined as the point at infinity which lies on every vertical line.\\
+\begin{figure}[h!]
+\caption{Example of Elliptic Curves}
 \includegraphics[scale=0.32]{Figure_1}
 \includegraphics[scale=0.32]{Figure_2}\\
 \includegraphics[scale=0.32]{Figure_3}
 \includegraphics[scale=0.32]{Figure_4}
+\end{figure}
+\cleardoublepage
 If (x,y) satisfies eq(1), then (x,-y) is also a solution of equation (1). So, elliptic curves are symmetric about x-axis. \\
 The definition of addition "$+$" operator is a not the usual definition one might expect 
 $$(a,b)+(c,d) \neq (a+c,b+d)$$
 Two points $P_1$ and $P_2$ on elliptic curve. If we make a line L that passes through $P_1$ and $P_2$, it will intersect the curve at point $P_3=(x_3,y_3)$. The reflection of $P_3$ from x-axis i.e. $(x_3,-y_3)$ is called the sum of points $P_1$ and $P_2$
+\begin{figure}[h!]
 \begin{center}
+\caption{Example of $P_1+P_2$}
 \includegraphics[scale=0.4]{2}
 \end{center}
-So, what is $P_1+P_1$? This is the limiting case where $P_2 \to P_1$ and the Line L becomes the tangent to E at $P_1$. This line will intersect E at $P_2$. The reflection of $P_2$ is $P_1+P_1$.
+\end{figure}
+\cleardoublepage
+So, what is $P_1+P_1$? This is the limiting case where $P_2 \to P_1$ and the Line L becomes the tangent to E at $P_1$. This line will intersect E at $P_3$. The reflection of $P_3$ about x-axis  is $P_1+P_1$.
+\begin{figure}[h!]
+\caption{Example of $P_1+P_1$}
 \begin{center}
-\includegraphics[scale=0.4]{3}
+\includegraphics[scale=0.3]{3}
 \end{center}
-What is happened when we try to add two points on the curve when $P_1=(x,y)$ and $P_2=(x,-y)$. In this case line L is $x=a$. L will not intersect the curve at third point. In this case we define 
-$ P_1+P_2= \mathscr{O} $. We define $\mathscr{O}$  as the point in infinity that lies on every vertical point.\\$P+\mathscr{O}=P$
+\end{figure}
+Let's look at the case when two points on the curve when $P_1=(x,y)$ and $P_2=(x,-y)$ are added. In this case line L is $x=a$. L will not intersect the curve at third point. In this case we define 
+$ P_1+P_2= \mathscr{O} $. We define $\mathscr{O}$  as the point in infinity that lies on every vertical line. 
+If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
+\begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.4]{1}
+\caption{Example of $P_1+(-P_1)=\mathscr{O}$}
+\includegraphics[scale=0.3]{1}
 \end{center}
+\end{figure}
+\cleardoublepage
 Theorem: Let E be Elliptic curve. Then $E$ forms abelian group under addition. The following below statements are true:
  \begin{enumerate}
  \item $P_1+\mathscr{O}=\mathscr{O}+P_1=P_1$ for all $P_1 \in E$
@@ -226,25 +262,23 @@ Theorem: Let E be Elliptic curve. Then $E$ forms abelian group under addition. T
  \item $(P_1+P_2)+P_3=P_1+(P_2+P_3)$ for all $P_1,P_2,P_3 \in E$
  \item $P_1+P_2=P_2+P_1$ for all $P_1,P_2 \in E$
  \end{enumerate}
- 
-
-  \section{Elliptic Curves over Finite Field}
-\section{Discrete Logarithm problem}
-\subsection{The elliptic curve discrete logarithm \\ problem}
-\subsection{Double and add algorithm}
-\subsection{How hard is the ECDLP?}
-\section{Elliptic curve cryptography}
-\section{Diﬃe–Hellman}
-\subsection{Diﬃe–Hellman key exchange}
+Proof:
+\\(1) Claim: $P_1+\mathscr{O}=P_1$ \\
+If a line is drawn through P and $\mathscr{O}$ it will intersect E at -P. Reflection of -P from x-axis is again P. So, $P_1+\mathscr{O}=P_1$ 
+Similarly, $\mathscr{O}+P_1=P_1$\\
+(2) Explained above in equation (2)\\
+(4) is true as line passing through $P_1$ and $P_2$ is same as the line passing through $P_2$ and $P_1$. 
+(3) will be proved using the next theorem.
 \cleardoublepage
-	
-
-\cite{hoffstein2008introduction}
-	
-	
+YET TO EXPLORE PART
+ \begin{enumerate}
+ \item  Elliptic curves over ﬁnite ﬁelds
+ \item  The elliptic curve discrete logarithm
+problem (ECDLP)
+ \item  Elliptic Diﬃe–Hellman key exchange
+ \item Lenstra’s elliptic curve factorization
+algorithm
+ \end{enumerate}
 \bibliographystyle{plain}
 \bibliography{bibliography}
-	 
-	
-
 \end{document}
