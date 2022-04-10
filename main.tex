@@ -337,6 +337,14 @@ $x$ is called discrete logarithm of $h$ base $x$ and is denoted by $x=log_g h$.
 Elliptic curve group operation is addition as described above.So, in case of elliptic curve discrete logarithm problem is described as follows:
 Let $P,Q \in E$ such that $nP=Q$. $n$ is called elliptic discrete logarithm of $Q$ base $P$ and is denoted by $n =\log_P Q$.
 
+It should be noted that if $Q$ is not multiple of $P$ then $n$ will not be defined. But for all practical purposes $Q$ is obtained from repeatedly adding $P$. So $n$ will exist.
+
+We also note that in every finite group every element has finite order. Let order of $P$ be $s$ i.e. $s P=\mathscr{O}$. If $n_0$ is the smallest number satisfying $Q=sP$. Then for all $n=n_0+is$ $ \forall i \in \mathbb{Z} $, $Q=nP$.It implies $\log_P Q$ is an element of  $\mathbb{Z}/s\mathbb{Z}$.We could also set the value to be $n_0$.But if we define the value to be in $\mathbb{Z}/s\mathbb{Z}$ the the following equation is satisfied.
+$$\log_P(Q+R)=\log_P(Q)+\log_P(R)$$
+Therefore the function 
+$log_P:E(F_p)\rightarrow \mathbb{Z}/s\mathbb{Z}$ defines group homomorphism.
+\subsection{Double and Add Algorithm}
+
 \cleardoublepage
 \section{Elliptic Diﬃe–Hellman key exchange}
 
