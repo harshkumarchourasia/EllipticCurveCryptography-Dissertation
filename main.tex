@@ -1,6 +1,7 @@
 \documentclass[12pt,a4paper]{report}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{mathrsfs}
 \newtheorem{theorem}{Theorem}
@@ -280,27 +281,30 @@ AX+B$. Then the following are true:
 \\$P_1+P_2 = (\lambda ^2 - x_1 - x_2, \lambda (x_1 - x_3)-y_1)$
 \end{enumerate}
 \end{theorem}
-Proof: $(1),(2),(3)$ are true as discussed above.
+\begin{proof}
+$(1),(2),(3)$ are true as discussed above.\\
+(4) If $P\neq Q$ then $\lambda$ is the slope of the line passing through $P$ and $Q$. If $P=Q$ then $\lambda$ is the slope of the tangent at $P$. Suppose Line $y=\lambda x+c$ intersects the curve at $(x_3,y_3)$ in addition to $(x_1,y_1)$ and $(x_2,y_2)$.
+$$(\lambda x+c)^2=x^3+Ax+B$$
+$$x^3-\lambda ^2 x^2 +(A-2c\lambda)x+(B-c^2)=(x-x_1)(x-x_2)(x-x_3)$$
+We get $x_3 = \lambda ^2-x_1-x_3$ by comparing the coefficients of $x^2$. $y_3=\lambda x+c=y_1-\lambda(x_1-x_2)$. The ordinate of $P+Q$ is $-y_3=\lambda (x_1 - x_3)-y_1)$
+\end{proof}
 \begin{theorem}
-
-Let E be Elliptic curve. Then $E$ forms abelian group under addition. The following below statements are true:
+Let E be Elliptic curve. Then $E$ forms abelian group under addition. The following statements are true:
  \begin{enumerate}
  \item $P_1+\mathscr{O}=\mathscr{O}+P_1=P_1$ for all $P_1 \in E$
  \item $P_1+(-P_1)=\mathscr{O}$ for all $P_1 \in E$
  \item $(P_1+P_2)+P_3=P_1+(P_2+P_3)$ for all $P_1,P_2,P_3 \in E$
  \item $P_1+P_2=P_2+P_1$ for all $P_1,P_2 \in E$
  \end{enumerate}
- 
 \end{theorem}
-Proof:
-\\(1) Claim: $P_1+\mathscr{O}=P_1$ \\
+\begin{proof}
+(1) Claim: $P_1+\mathscr{O}=P_1$ \\
 If a line is drawn through P and $\mathscr{O}$ it will intersect E at -P. Reflection of -P from x-axis is again P. So, $P_1+\mathscr{O}=P_1$ 
 Similarly, $\mathscr{O}+P_1=P_1$\\
 (2) Explained above in equation (2)\\
 (3) Associative property is non-trivial to prove using geometry. It can be verified by using Theorem 2 by calculation using substitution.\\
 (4) is true as line passing through $P_1$ and $P_2$ is same as the line passing through $P_2$ and $P_1$. 
-
-
+\end{proof}
 \cleardoublepage
 \section{Elliptic curves over ﬁnite ﬁelds}
 \begin{definition}
@@ -309,8 +313,20 @@ Elliptic curve over a finite field $F_p$ is defined as equation of the form $$E:
 Example:
 Let's suppose $a=0$, $b=1$ and $p=11$. \\
 $F_{11}=\{0,1,2,3,4,5,6,7,8,9,10\}$.$\{a,b\}\in F_{11}$ and $4*0^2+27*1^3=27\neq 0$. Hence, $E:y^2 = x^3+1 \pmod {11} $ is an elliptic curve over finite field. \\
-$E(F_{11}) = \{\mathscr{O},(10,0),(0,10),(0,1),(9,2),(9,9),(6,3),(6,8),(8,4),(8,7),(3,5),(3,6)\}$
+$E(F_{11}) = \{\mathscr{O},(10,0),(0,10),(0,1),(9,2),(9,9),(2,3),(2,8),(6,8),(8,4),(8,7),(3,5),(3,6)\}$
 with $|E(F_{11})|=12$
+\begin{theorem}
+Equation of elliptic curve over finite field $F_p$ is $E : Y^2=X^3+
+AX+B$. Let $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ be two points on $E$. If Theorem 2 is applied to points $P$ and $Q$ then the resulting point also lies on $E$.
+\end{theorem}
+\begin{proof}
+Theorem 2 is derived by substututing the equation of line to elliptic curve. So the solution automatically satisfies the elliptic curve. Similarly Theorem 4 is also true.\\
+\end{proof}
+Example: Consider the above example. Let $P=(0,1)$ and $Q=(10,0)$. 
+$\lambda = \frac{1-0}{0-10} = \frac{1}{-	10} = 1 \pmod{11}$,$x_3=1-0-10=-9=2 \pmod{11}$\\ $y_3=1(0-(2))-1=-3=8$ and $(2,8) \in E$ \begin{theorem}
+The elliptic curve over finite field along with addition property forms finite group.
+\end{theorem}
+
 \cleardoublepage
 \section{Elliptic curve discrete logarithm problem}
 
