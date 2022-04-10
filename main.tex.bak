@@ -113,42 +113,47 @@ Place:\\
 This chapter covers topics of Abstract Algebra and Number Theory that are required for cryptography and elliptic curves.\\
 This definition of Group, Ring, Field are as follows
 \section{Group}
+\begin{definition}
 The set  $G$ is equipped with  single operation $*$ such the the $4$ below properties are satisfied is called a Group.\\
 $(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 $(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 $(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
 $(4)$ Inverse: $ \forall x \in S, \exists y \in G$ such that$x*y=0$ where $y$ is known as inverse of $x$ and is denoted by $x^{-1}$
+\end{definition}
 \subsection{Abelian Group}
+\begin{definition}
 The set $G$ is equipped with  single operation $*$ such the the $5$ below properties are satisfied is called a Abelian Group.\\
 $(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 $(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 $(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
 $(4)$ Commutative Property: $ \forall x,y \in G$, $x*y=y*x$ \\
 $(5)$ Inverse: $ \forall x \in G, \exists y \in G$ such that $x*y=0$ where $y$ is known as inverse of $x$ and is denoted by $x^{-1}$	
-	
+\end{definition}
 So, a abelian group G is a group with $\forall x,y \in G, x*y=y*x$
 \cleardoublepage
 	
 \section{Ring}
+\begin{definition}
 A ring is a set $R$ with two operations $+$ and $*$ which satisfy the below properties\\
 $(1)$ It is abelian group under $+$ \\
 $(2)$ Closure under $*$:  $x,y \in R \Rightarrow	x*y \in R $  \\
 $(3)$ Associative under $*$: $x,y,z \in R \Rightarrow	(x*y)*z=x*(y*z) $\\
 $(4)$ Distributive property $x,y,z \in R$
 $$x*(y+z)=x*y+x*z$$ $$(x+y)*z=x*z+y*z$$
-	
+\end{definition}
 \section{Field}
+\begin{definition}
 A Field is a set $F$ with two operations $+$ and $*$ with following properties \\
 $(1)$Commutative group under $+$\\
 $(2)$Commutative group under $*$\\
 $(3)$Distributive property $x,y,z \in F$
 $$x*(y+z)=x*y+x*z$$ $$(x+y)*z=x*z+y*z$$
+\end{definition}
 \section{Fermat’s little theorem}
 \begin{theorem}
 Let p be any prime number. For any number a such that $p\nmid a$. Then  
 $a^{p-1}\equiv 1\pmod p$\\
 \end{theorem}
-
 Proof: Assume p is a prime number and $p \nmid a$ \\
 Every integer is congruent to one of $0,1,2,\cdots,p-1\pmod p$\\
 Only focus on non zero congruence classes, because $0 \pmod p$ contains all the multiples of p (and $p \nmid a$).
@@ -271,11 +276,11 @@ AX+B$. Then the following are true:
 \item If $P=\mathscr{O}$, then $P+Q=Q$
 \item If $Q=\mathscr{O}$, then $P+Q=P$
 \item If $P=-Q$ then $P+Q=\mathscr{O}$
-\item If $P \neq Q$ then $\lambda = (y_2-y_1)/(x_2-x_1)$ and \\$P=Q$ then $\lambda = (3x_1^2+A)/(2y_1)$
-then \\$P_1+P_2 = (\lambda ^2 - x_1 - x_2, \lambda (x_1 - x_3)-y_1)$
+\item If $P \neq Q$ then $\lambda = (y_2-y_1)/(x_2-x_1)$ and if $P=Q$ then\\ $\lambda = (3x_1^2+A)/(2y_1)$. In both cases,
+\\$P_1+P_2 = (\lambda ^2 - x_1 - x_2, \lambda (x_1 - x_3)-y_1)$
 \end{enumerate}
 \end{theorem}
-Proof:
+Proof: $(1),(2),(3)$ are true as discussed above.
 \begin{theorem}
 
 Let E be Elliptic curve. Then $E$ forms abelian group under addition. The following below statements are true:
@@ -292,8 +297,8 @@ Proof:
 If a line is drawn through P and $\mathscr{O}$ it will intersect E at -P. Reflection of -P from x-axis is again P. So, $P_1+\mathscr{O}=P_1$ 
 Similarly, $\mathscr{O}+P_1=P_1$\\
 (2) Explained above in equation (2)\\
+(3) Associative property is non-trivial to prove using geometry. It can be verified by using Theorem 2 by calculation using substitution.\\
 (4) is true as line passing through $P_1$ and $P_2$ is same as the line passing through $P_2$ and $P_1$. 
-(3) will be proved using the next theorem.
 
 
 \cleardoublepage
@@ -307,8 +312,7 @@ $F_{11}=\{0,1,2,3,4,5,6,7,8,9,10\}$.$\{a,b\}\in F_{11}$ and $4*0^2+27*1^3=27\neq
 $E(F_{11}) = \{\mathscr{O},(10,0),(0,10),(0,1),(9,2),(9,9),(6,3),(6,8),(8,4),(8,7),(3,5),(3,6)\}$
 with $|E(F_{11})|=12$
 \cleardoublepage
-\section{Elliptic curve discrete logarithm
-problem}
+\section{Elliptic curve discrete logarithm problem}
 
 \begin{definition}
 Let $(G,.)$ be a group and $g$ be the generator of the group and $h\in G$ such that $$g^x=h$$
@@ -318,7 +322,7 @@ Elliptic curve group operation is addition as described above.So, in case of ell
 Let $P,Q \in E$ such that $nP=Q$. $n$ is called elliptic discrete logarithm of $Q$ base $P$ and is denoted by $n =\log_P Q$.
 
 \cleardoublepage
-  Elliptic Diﬃe–Hellman key exchange
+\section{Elliptic Diﬃe–Hellman key exchange}
 
 \bibliographystyle{plain}
 \bibliography{bibliography}

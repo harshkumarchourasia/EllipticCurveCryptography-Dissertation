@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.18)  10 APR 2022 11:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.18)  10 APR 2022 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -251,19 +251,19 @@ Chapter 1.
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--164
+Underfull \hbox (badness 10000) in paragraph at lines 162--169
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 165--168
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 
  []
 
@@ -276,28 +276,28 @@ Chapter 2.
 <sym.png, id=46, 1181.41376pt x 409.53pt>
 File: sym.png Graphic file (type png)
 <use sym.png>
-Package pdftex.def Info: sym.png  used on input line 204.
+Package pdftex.def Info: sym.png  used on input line 209.
 (pdftex.def)             Requested size: 425.30862pt x 147.43068pt.
 
-Overfull \hbox (35.30862pt too wide) in paragraph at lines 204--205
+Overfull \hbox (35.30862pt too wide) in paragraph at lines 209--210
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--213
+Underfull \hbox (badness 10000) in paragraph at lines 215--218
 
  []
 
 <asym.png, id=48, 941.5175pt x 511.9125pt>
 File: asym.png Graphic file (type png)
 <use asym.png>
-Package pdftex.def Info: asym.png  used on input line 217.
+Package pdftex.def Info: asym.png  used on input line 222.
 (pdftex.def)             Requested size: 338.94604pt x 184.28836pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
@@ -305,44 +305,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  <./sym.png>]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-26.
+31.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 231.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--229
+Underfull \hbox (badness 10000) in paragraph at lines 231--234
 
  []
 
 <Figure_1.png, id=53, 685.1196pt x 690.9012pt>
 File: Figure_1.png Graphic file (type png)
 <use Figure_1.png>
-Package pdftex.def Info: Figure_1.png  used on input line 233.
+Package pdftex.def Info: Figure_1.png  used on input line 238.
 (pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
 <Figure_2.png, id=54, 685.1196pt x 690.9012pt>
 File: Figure_2.png Graphic file (type png)
 <use Figure_2.png>
-Package pdftex.def Info: Figure_2.png  used on input line 234.
+Package pdftex.def Info: Figure_2.png  used on input line 239.
 (pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
 <Figure_3.png, id=55, 685.1196pt x 690.9012pt>
 File: Figure_3.png Graphic file (type png)
 <use Figure_3.png>
-Package pdftex.def Info: Figure_3.png  used on input line 235.
+Package pdftex.def Info: Figure_3.png  used on input line 240.
 (pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
 <Figure_4.png, id=56, 685.1196pt x 690.9012pt>
 File: Figure_4.png Graphic file (type png)
 <use Figure_4.png>
-Package pdftex.def Info: Figure_4.png  used on input line 236.
+Package pdftex.def Info: Figure_4.png  used on input line 241.
 (pdftex.def)             Requested size: 219.24275pt x 221.0929pt.
 
-Overfull \hbox (51.09659pt too wide) in paragraph at lines 233--237
+Overfull \hbox (51.09659pt too wide) in paragraph at lines 238--242
 [][] [] 
  []
 
 
-Overfull \hbox (51.09659pt too wide) in paragraph at lines 233--237
+Overfull \hbox (51.09659pt too wide) in paragraph at lines 238--242
 [] [] 
  []
 
@@ -354,7 +354,7 @@ e_4.png>]
 <2.png, id=70, 583.17876pt x 585.18625pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 246.
+Package pdftex.def Info: 2.png  used on input line 251.
 (pdftex.def)             Requested size: 233.26736pt x 234.07034pt.
  [9
 
@@ -362,19 +362,19 @@ Package pdftex.def Info: 2.png  used on input line 246.
 <3.png, id=75, 709.65125pt x 589.20125pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 254.
+Package pdftex.def Info: 3.png  used on input line 259.
 (pdftex.def)             Requested size: 212.897pt x 176.76173pt.
 <1.png, id=76, 581.17125pt x 584.1825pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 263.
+Package pdftex.def Info: 1.png  used on input line 268.
 (pdftex.def)             Requested size: 174.35272pt x 175.25609pt.
  [10
 
  <./3.png> <./1.png>] [11
 
 ]
-Overfull \hbox (40.10506pt too wide) in paragraph at lines 304--309
+Overfull \hbox (40.10506pt too wide) in paragraph at lines 309--314
 \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 ) = \OMS
 /cmsy/m/n/12 f\U/rsfs/m/n/12 O\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (10\OML/cmm/m/
 it/12 ; \OT1/cmr/m/n/12 0)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (0\OML/cmm/m/it/12
@@ -405,7 +405,7 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 Here is how much of TeX's memory you used:
  2517 strings out of 481209
  33390 string characters out of 5914747
- 306645 words of memory out of 5000000
+ 307645 words of memory out of 5000000
  19442 multiletter control sequences out of 15000+600000
  412928 words of font info for 62 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -422,7 +422,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/rsfs/rsfs10.pfb>
-Output written on main.pdf (20 pages, 421146 bytes).
+Output written on main.pdf (20 pages, 423482 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
