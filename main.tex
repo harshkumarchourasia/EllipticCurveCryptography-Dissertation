@@ -3,6 +3,9 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{mathrsfs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
 \begin{document}
 
 %TITLE PAGE
@@ -141,8 +144,11 @@ $(2)$Commutative group under $*$\\
 $(3)$Distributive property $x,y,z \in F$
 $$x*(y+z)=x*y+x*z$$ $$(x+y)*z=x*z+y*z$$
 \section{Fermat’s little theorem}
-Theorem: Let p be any prime number. For any number a such that $p\nmid a$. Then  
+\begin{theorem}
+Let p be any prime number. For any number a such that $p\nmid a$. Then  
 $a^{p-1}\equiv 1\pmod p$\\
+\end{theorem}
+
 Proof: Assume p is a prime number and $p \nmid a$ \\
 Every integer is congruent to one of $0,1,2,\cdots,p-1\pmod p$\\
 Only focus on non zero congruence classes, because $0 \pmod p$ contains all the multiples of p (and $p \nmid a$).
@@ -215,10 +221,13 @@ Private keys is not transmitted across the network. Public are used to encrypt t
 	
 \section{Elliptic Curves}
 Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equations. It is named after Karl Weierstrass $(1815-1897)$ who studied them in $19^{th}$ century. \\
-Definition:Elliptic curves are solution sets of Weierstrass equations
+\begin{definition}
+Elliptic curves are solution sets of Weierstrass equations
 $$E:y^2 = x^3+ax+b ...(1)$$ with  $ \{\ \mathscr{O}  $ \}\ where $\Delta_E = 4a^3+27b^2\neq 0$. 
 $\Delta_E \neq 0$ guarantees that the equation $x^3+ax+b$ has no repeated roots i.e. 
 $ x^3+ax+b=(x-e_1)(x-e_2)(x-e_3)$ where $e_1,e_2,e_3$ are distinct. $  \mathscr{O}  $  is defined as the point at infinity which lies on every vertical line.\\
+\end{definition}
+
 \begin{figure}[h!]
 \caption{Example of Elliptic Curves}
 \includegraphics[scale=0.32]{Figure_1}
@@ -255,9 +264,9 @@ If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
 \end{center}
 \end{figure}
 \cleardoublepage
-Theorem: Let $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ be two points on elliptic curve $E:Y^2=X^3+
-AX+B$. Then the following are true:\\
-Proof:
+\begin{theorem}
+Let $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ be two points on elliptic curve $E:Y^2=X^3+
+AX+B$. Then the following are true:
 \begin{enumerate}
 \item If $P=\mathscr{O}$, then $P+Q=Q$
 \item If $Q=\mathscr{O}$, then $P+Q=P$
@@ -265,15 +274,19 @@ Proof:
 \item If $P \neq Q$ then $\lambda = (y_2-y_1)/(x_2-x_1)$ and \\$P=Q$ then $\lambda = (3x_1^2+A)/(2y_1)$
 then \\$P_1+P_2 = (\lambda ^2 - x_1 - x_2, \lambda (x_1 - x_3)-y_1)$
 \end{enumerate}
+\end{theorem}
 Proof:
+\begin{theorem}
 
-Theorem: Let E be Elliptic curve. Then $E$ forms abelian group under addition. The following below statements are true:
+Let E be Elliptic curve. Then $E$ forms abelian group under addition. The following below statements are true:
  \begin{enumerate}
  \item $P_1+\mathscr{O}=\mathscr{O}+P_1=P_1$ for all $P_1 \in E$
  \item $P_1+(-P_1)=\mathscr{O}$ for all $P_1 \in E$
  \item $(P_1+P_2)+P_3=P_1+(P_2+P_3)$ for all $P_1,P_2,P_3 \in E$
  \item $P_1+P_2=P_2+P_1$ for all $P_1,P_2 \in E$
  \end{enumerate}
+ 
+\end{theorem}
 Proof:
 \\(1) Claim: $P_1+\mathscr{O}=P_1$ \\
 If a line is drawn through P and $\mathscr{O}$ it will intersect E at -P. Reflection of -P from x-axis is again P. So, $P_1+\mathscr{O}=P_1$ 
@@ -284,18 +297,23 @@ Similarly, $\mathscr{O}+P_1=P_1$\\
 
 
 \cleardoublepage
-Elliptic curves over ﬁnite ﬁelds\\
-Definition : Elliptic curve over a finite field $F_p$ is defined as equation of the form $$E:y^2 = x^3+ax+b$$ where $a,b\in F_p$ and $\Delta_E = 4a^3+27b^2\neq 0$. \\
+\section{Elliptic curves over ﬁnite ﬁelds}
+\begin{definition}
+Elliptic curve over a finite field $F_p$ is defined as equation of the form $$E:y^2 = x^3+ax+b$$ where $a,b\in F_p$ and $\Delta_E = 4a^3+27b^2\neq 0$. 
+\end{definition}
 Example:
+Let's suppose $a=0$, $b=1$ and $p=11$. \\
+$F_{11}=\{0,1,2,3,4,5,6,7,8,9,10\}$.$\{a,b\}\in F_{11}$ and $4*0^2+27*1^3=27\neq 0$. Hence, $E:y^2 = x^3+1 \pmod {11} $ is an elliptic curve over finite field. \\
+$E(F_{11}) = \{\mathscr{O},(10,0),(0,10),(0,1),(9,2),(9,9),(6,3),(6,8),(8,4),(8,7),(3,5),(3,6)\}$
+with $|E(F_{11})|=12$
 \cleardoublepage
+\section{Elliptic curve discrete logarithm
+problem}
 
-
-  The elliptic curve discrete logarithm
-problem (ECDLP)
-
-Defination: Let $(G,.)$ be a group and $g$ be the generator of the group and $h\in G$ such that $$g^x=h$$
+\begin{definition}
+Let $(G,.)$ be a group and $g$ be the generator of the group and $h\in G$ such that $$g^x=h$$
 $x$ is called discrete logarithm of $h$ base $x$ and is denoted by $x=log_g h$.
-
+\end{definition}
 Elliptic curve group operation is addition as described above.So, in case of elliptic curve discrete logarithm problem is described as follows:
 Let $P,Q \in E$ such that $nP=Q$. $n$ is called elliptic discrete logarithm of $Q$ base $P$ and is denoted by $n =\log_P Q$.
 
