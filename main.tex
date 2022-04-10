@@ -255,6 +255,18 @@ If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
 \end{center}
 \end{figure}
 \cleardoublepage
+Theorem: Let $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ be two points on elliptic curve $E:Y^2=X^3+
+AX+B$. Then the following are true:\\
+Proof:
+\begin{enumerate}
+\item If $P=\mathscr{O}$, then $P+Q=Q$
+\item If $Q=\mathscr{O}$, then $P+Q=P$
+\item If $P=-Q$ then $P+Q=\mathscr{O}$
+\item If $P \neq Q$ then $\lambda = (y_2-y_1)/(x_2-x_1)$ and \\$P=Q$ then $\lambda = (3x_1^2+A)/(2y_1)$
+then \\$P_1+P_2 = (\lambda ^2 - x_1 - x_2, \lambda (x_1 - x_3)-y_1)$
+\end{enumerate}
+Proof:
+
 Theorem: Let E be Elliptic curve. Then $E$ forms abelian group under addition. The following below statements are true:
  \begin{enumerate}
  \item $P_1+\mathscr{O}=\mathscr{O}+P_1=P_1$ for all $P_1 \in E$
@@ -269,16 +281,27 @@ Similarly, $\mathscr{O}+P_1=P_1$\\
 (2) Explained above in equation (2)\\
 (4) is true as line passing through $P_1$ and $P_2$ is same as the line passing through $P_2$ and $P_1$. 
 (3) will be proved using the next theorem.
+
+
 \cleardoublepage
-YET TO EXPLORE PART
- \begin{enumerate}
- \item  Elliptic curves over ﬁnite ﬁelds
- \item  The elliptic curve discrete logarithm
+Elliptic curves over ﬁnite ﬁelds\\
+Definition : Elliptic curve over a finite field $F_p$ is defined as equation of the form $$E:y^2 = x^3+ax+b$$ where $a,b\in F_p$ and $\Delta_E = 4a^3+27b^2\neq 0$. \\
+Example:
+\cleardoublepage
+
+
+  The elliptic curve discrete logarithm
 problem (ECDLP)
- \item  Elliptic Diﬃe–Hellman key exchange
- \item Lenstra’s elliptic curve factorization
-algorithm
- \end{enumerate}
+
+Defination: Let $(G,.)$ be a group and $g$ be the generator of the group and $h\in G$ such that $$g^x=h$$
+$x$ is called discrete logarithm of $h$ base $x$ and is denoted by $x=log_g h$.
+
+Elliptic curve group operation is addition as described above.So, in case of elliptic curve discrete logarithm problem is described as follows:
+Let $P,Q \in E$ such that $nP=Q$. $n$ is called elliptic discrete logarithm of $Q$ base $P$ and is denoted by $n =\log_P Q$.
+
+\cleardoublepage
+  Elliptic Diﬃe–Hellman key exchange
+
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}
