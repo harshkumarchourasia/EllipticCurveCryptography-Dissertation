@@ -344,6 +344,43 @@ $$\log_P(Q+R)=\log_P(Q)+\log_P(R)$$
 Therefore the function 
 $log_P:E(F_p)\rightarrow \mathbb{Z}/s\mathbb{Z}$ defines group homomorphism.
 \subsection{Double and Add Algorithm}
+The value of $n$ in $Q=nP$ is large for practical application.If $nP$ is calculated by adding $P$ repeteadly $n$ number of times, it will $O(n)$ operation. Suppose $n$ has $k$ binary digits. Then the complexity will be $O(2^k)$. By the use of double and add algorithm we can reduce the complexity to $O(\log {n})$ or $O(k)$.\\
+Take $n=151$. Binary representation of 151 is $10010111_2$.
+$$151=1.2^7+0.2^6+0.2^5+1.2^5+0.2^4+1.2^3+1.2^2+1.2^1+1.2^0$$
+$$or$$
+$$151P = 2^7P+2^4P+2^2P+2^1P+2^0P$$
+\cleardoublepage
+
+Obtain $151P$ using double and add algorithm
+\begin{enumerate}
+\item Start with $P$
+\item Double it to get $2P$ ($P+P$)
+\item Add $2P$ to $P$ (result will be $2^1P+2^0P$)
+\item Double $2P$ to get $4P$ ($2P+2P$)
+\item Add $4P$ to the result (result will be $2^2P+2^1P+2^0P$)
+\item Double $4P$ to get $8P$ ($4P+4P$)
+\item Double $8P$ to get $16P$ ($8P+8P$)
+\item Add $16P$ to the result (result will be $2^4P+2^2P+2^1P+2^0P$)
+\item Keep Doubling $16P$ till $128P$ is obtained
+\item Add $128P$ to the result (result will be $2^7P+2^4P+2^2P+2^1P+2^0P$)
+\end{enumerate}
+We obtained $151P$ using only four addition and seven doubling operation!\\\\\\
+Psuedo-code of double and add algorithm\\
+Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in {0,1}$,$m =\lfloor \log_2 {n} \rfloor$ 
+\begin{enumerate}
+\item $bits = [n_0,n_1,...n_m]$
+\item $result=\mathscr{O}$ \hspace{10mm} //  infinity point
+\item $temp=P$
+\item for bit in bits:
+\item \hspace{10mm}  if bit == 1:
+\item \hspace{10mm} \hspace{10mm}  result = result + temp \hspace{10mm} // addition operation
+\item \hspace{10mm} temp = temp + temp \hspace{10mm}  // doubling operaion
+\item return result 
+\end{enumerate}
+
+
+
+
 
 \cleardoublepage
 \section{Elliptic Diﬃe–Hellman key exchange}
