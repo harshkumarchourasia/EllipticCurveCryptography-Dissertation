@@ -1,0 +1,457 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.3.18)  12 APR 2022 11:09
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks17
+\thm@bodyfont=\toks18
+\thm@headfont=\toks19
+\thm@notefont=\toks20
+\thm@headpunct=\toks21
+\thm@preskip=\skip49
+\thm@postskip=\skip50
+\thm@headsep=\skip51
+\dth@everypar=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen141
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count186
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count187
+\leftroot@=\count188
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count189
+\DOTSCASE@=\count190
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count191
+\c@MaxMatrixCols=\count192
+\dotsspace@=\muskip16
+\c@parentequation=\count193
+\dspbrk@lvl=\count194
+\tag@help=\toks24
+\row@=\count195
+\column@=\count196
+\maxfields@=\count197
+\andhelp@=\toks25
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks26
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+\c@theorem=\count198
+\c@definition=\count199
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count266
+\l__pdf_internal_box=\box49
+)
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count267
+\scratchdimen=\dimen150
+\scratchbox=\box50
+\nofMPsegments=\count268
+\nofMParguments=\count269
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count270
+\MPscratchDim=\dimen151
+\MPnumerator=\count271
+\makeMPintoPDFobject=\count272
+\everyMPtoPDFconversion=\toks29
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<logo.png, id=1, 200.75pt x 200.75pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 32.
+(pdftex.def)             Requested size: 150.56212pt x 150.56212pt.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 50--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--57
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 58
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 70--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--81
+
+ []
+
+[1] [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 93--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--102
+
+ []
+
+[3
+
+] (./main.toc)
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [4
+
+
+] [1
+
+]
+Chapter 1.
+[2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
+
+ []
+
+
+Overfull \hbox (4.67316pt too wide) in paragraph at lines 158--163
+\OT1/cmr/m/n/14.4 con-tains all the mul-ti-ples of p (and $\OML/cmm/m/it/14.4 p
+ \U/msb/m/n/14.4 - \OML/cmm/m/it/14.4 a$\OT1/cmr/m/n/14.4 ). Fo-cus on $0\OML/c
+mm/m/it/14.4 ; \OT1/cmr/m/n/14.4 1\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 2\OML/
+cmm/m/it/14.4 ; []  ; p \OMS/cmsy/m/n/14.4 ^^@
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 163--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
+
+ []
+
+[4]
+Chapter 2.
+[5
+
+
+]
+<sym.png, id=46, 1181.41376pt x 409.53pt>
+File: sym.png Graphic file (type png)
+<use sym.png>
+Package pdftex.def Info: sym.png  used on input line 209.
+(pdftex.def)             Requested size: 425.30862pt x 147.43068pt.
+
+Overfull \hbox (35.30862pt too wide) in paragraph at lines 209--210
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--218
+
+ []
+
+[6 <./sym.png>]
+<asym.png, id=52, 941.5175pt x 511.9125pt>
+File: asym.png Graphic file (type png)
+<use asym.png>
+Package pdftex.def Info: asym.png  used on input line 222.
+(pdftex.def)             Requested size: 338.94604pt x 184.28836pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+[7 <./asym.png>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
+31.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 231.
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--234
+
+ []
+
+<Figure_1.png, id=57, 685.1196pt x 690.9012pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 238.
+(pdftex.def)             Requested size: 205.53746pt x 207.27196pt.
+<Figure_2.png, id=58, 685.1196pt x 690.9012pt>
+File: Figure_2.png Graphic file (type png)
+<use Figure_2.png>
+Package pdftex.def Info: Figure_2.png  used on input line 239.
+(pdftex.def)             Requested size: 205.53746pt x 207.27196pt.
+<Figure_3.png, id=59, 685.1196pt x 690.9012pt>
+File: Figure_3.png Graphic file (type png)
+<use Figure_3.png>
+Package pdftex.def Info: Figure_3.png  used on input line 240.
+(pdftex.def)             Requested size: 205.53746pt x 207.27196pt.
+<Figure_4.png, id=60, 685.1196pt x 690.9012pt>
+File: Figure_4.png Graphic file (type png)
+<use Figure_4.png>
+Package pdftex.def Info: Figure_4.png  used on input line 241.
+(pdftex.def)             Requested size: 205.53746pt x 207.27196pt.
+
+Overfull \hbox (23.686pt too wide) in paragraph at lines 238--242
+[][] [] 
+ []
+
+
+Overfull \hbox (23.686pt too wide) in paragraph at lines 238--242
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8] [9 <./Figure_1.png> <./Figure_2.png> <./Figure_3.png> <./Figure_4.png>]
+<2.png, id=73, 583.17876pt x 585.18625pt>
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 251.
+(pdftex.def)             Requested size: 233.26736pt x 234.07034pt.
+<3.png, id=74, 709.65125pt x 589.20125pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 258.
+(pdftex.def)             Requested size: 212.897pt x 176.76173pt.
+<1.png, id=75, 581.17125pt x 584.1825pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 267.
+(pdftex.def)             Requested size: 174.35272pt x 175.25609pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10
+
+ <./2.png>] [11 <./3.png> <./1.png>] [12
+
+] [13]
+Overfull \hbox (163.52432pt too wide) in paragraph at lines 311--316
+\OML/cmm/m/it/14.4 E\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 F[]\OT1/cmr/m/n/14.4 
+) = \OMS/cmsy/m/n/14.4 f\U/rsfs/m/n/14.4 O\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.
+4 (10\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 0)\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n
+/14.4 (0\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 10)\OML/cmm/m/it/14.4 ; \OT1/cmr
+/m/n/14.4 (0\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 1)\OML/cmm/m/it/14.4 ; \OT1/
+cmr/m/n/14.4 (9\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 2)\OML/cmm/m/it/14.4 ; \O
+T1/cmr/m/n/14.4 (9\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 9)\OML/cmm/m/it/14.4 ;
+ \OT1/cmr/m/n/14.4 (2\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 3)\OML/cmm/m/it/14.
+4 ; \OT1/cmr/m/n/14.4 (2\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 8)\OML/cmm/m/it/
+14.4 ; \OT1/cmr/m/n/14.4 (6\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 8)\OML/cmm/m/
+it/14.4 ; \OT1/cmr/m/n/14.4 (8\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 4)\OML/cmm
+/m/it/14.4 ; \OT1/cmr/m/n/14.4 (8\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 7)\OML/
+cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 (3\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 5)\O
+ML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 (3\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 6
+)\OMS/cmsy/m/n/14.4 g$
+ []
+
+[14
+
+]
+Overfull \hbox (12.66493pt too wide) in paragraph at lines 335--337
+[]\OT1/cmr/m/n/14.4 Elliptic curve group op-er-a-tion is ad-di-tion as de-scrib
+ed above.So,
+ []
+
+[15
+
+] [16] [17
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
+
+ []
+
+No file main.bbl.
+[18
+
+] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 2598 strings out of 481209
+ 34420 string characters out of 5914747
+ 310860 words of memory out of 5000000
+ 19520 multiletter control sequences out of 15000+600000
+ 415729 words of font info for 75 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 68i,7n,74p,665b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/harsh/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/e
+c/tcrm1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/rsfs/rsfs10.pfb>
+Output written on main.pdf (23 pages, 444094 bytes).
+PDF statistics:
+ 151 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+
