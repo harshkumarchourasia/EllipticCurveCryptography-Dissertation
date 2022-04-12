@@ -367,15 +367,30 @@ Obtain $151P$ using double and add algorithm
 We obtained $151P$ using only four addition and seven doubling operation!\\\\\\
 Psuedo-code of double and add algorithm\\
 Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in {0,1}$,$m =\lfloor \log_2 {n} \rfloor$ 
-$bits = [n_0,n_1,...n_m]$\\
-$result=\mathscr{O}$ // infinity point\\
-$temp=P$\\
-
-
-
-
+\begin{enumerate}
+\item $bits = [n_0,n_1,...n_m]$
+\item $result=\mathscr{O}$ \hspace{10mm} //  infinity point
+\item $temp=P$
+\item for bit in bits:
+\item \hspace{10mm}  if bit == 1:
+\item \hspace{10mm} \hspace{10mm}  result = result + temp \hspace{10mm} // addition operation
+\item \hspace{10mm} temp = temp + temp \hspace{10mm}  // doubling operaion
+\item return result 
+\end{enumerate}
 \cleardoublepage
 \section{Elliptic Diﬃe–Hellman key exchange}
+In this section we will use Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message were shared over public channel. Diffe-Hellman key exchange helps sender and reciever of the message to securely exchange cryptographic keys over public channel. It's security does depend on mathematical principle. \\\\
+Elliptic Diﬃe–Hellman Key Exchange Algorithm
+\begin{enumerate}
+\item A large prime number $p$, an Elliptic Curve $E$ over $F_p$ and a point $P \in E(F_p)$  is shared between Ram and Shyam over public channel.
+\item Ram chooses a large random number $n_R$ and computes $Q_R = n_R P$
+\item Shyam chooses a large random number $n_S$ and computes $Q_S = n_S P$
+\item Ram and Shyam shares $Q_R$ and $Q_S$ over the public channel.
+\item  Ram now compute $n_R Q_S$
+\item
+\item
+\item
+\end{enumerate}
 
 \bibliographystyle{plain}
 \bibliography{bibliography}

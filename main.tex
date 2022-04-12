@@ -377,13 +377,19 @@ Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in {0,1}$,$m =\lfloor \log
 \item \hspace{10mm} temp = temp + temp \hspace{10mm}  // doubling operaion
 \item return result 
 \end{enumerate}
-
-
-
-
-
 \cleardoublepage
 \section{Elliptic Diﬃe–Hellman key exchange}
+In this section we will use Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message were shared over public channel. Diffe-Hellman key exchange helps sender and reciever of the message to securely exchange cryptographic keys over public channel. It's security does depend on mathematical principle. \\\\
+Elliptic Diﬃe–Hellman Key Exchange Algorithm
+\begin{enumerate}
+\item A large prime number $p$, an Elliptic Curve $E$ over $F_p$ and a point $P \in E(F_p)$  is shared between Ram and Shyam over public channel.
+\item Ram chooses a large random number $n_R$ and computes $Q_R = n_R P$
+\item Shyam chooses a large random number $n_S$ and computes $Q_S = n_S P$
+\item Ram and Shyam shares $Q_R$ and $Q_S$ over the public channel.
+\item Ram now compute $n_R Q_S$
+\item Shyam now compute $n_S Q_R$
+\item The shared secret key is $n_R Q_S=n_R (n_S P)=n_S (n_R P)=n_S Q_R$
+\end{enumerate}
 
 \bibliographystyle{plain}
 \bibliography{bibliography}
