@@ -386,9 +386,9 @@ Elliptic Diﬃe–Hellman Key Exchange Algorithm
 	\item Ram and Shayam shares $Q_R$ and $Q_S$ over the public channel.
 	\item Ram now compute $n_R Q_S$
 	\item Shayam now compute $n_S Q_R$
-	\item The shared secret key is $n_R Q_S=n_R (n_S P)=n_S (n_R P)=n_S Q_R$
+	\item The shared secret key is $Q=n_R Q_S=n_R (n_S P)=n_S (n_R P)=n_S Q_R$
 \end{enumerate}
-
+Suppose Ghanshyam wants to obtain the secret key. Ghanshyam knows the value of $P$, $Q_R$, $Q_S$ as they are available on public channel. Ghanshyam can solve Elliptic Curve Discrete Logarithm Problem i.e. the equation $Q_R = n_R P$ or $Q_S = n_S P$ to obtain the value of $n_R$ and $n_S$ respectivly. After the the value of $Q$ can be obtained using the formula $Q=n_R Q_S$ or $Q=n_S Q_R$. 
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}
