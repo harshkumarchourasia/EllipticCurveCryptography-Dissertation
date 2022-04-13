@@ -375,6 +375,12 @@ Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in {0,1}$,$m =\lfloor \log
 	\item \hspace{10mm} temp = temp + temp \hspace{10mm}  // doubling operation
 	\item return result
 \end{enumerate}
+\subsection{Hasse's Theorem}
+Hasse's Theorem is used to estimate number of points in an elliptic curve over finite field. We state Hasse's theorem without proof.
+\begin{theorem}
+Let $N$ be the number of points on an Elliptic Curve $E$ over finite field $F_q$. Then the following inequality is true
+$$|N-(q+1)|<2\sqrt{q}$$ 
+\end{theorem}
 \cleardoublepage
 \section{Elliptic Diﬃe–Hellman key exchange}
 In this section we will use Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message were shared over public channel. Diffie-Hellman key exchange helps sender and receiver of the message to securely exchange cryptographic keys over public channel. It's security does depend on mathematical principle. \\\\
