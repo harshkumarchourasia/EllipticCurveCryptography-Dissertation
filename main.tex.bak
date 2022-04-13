@@ -362,8 +362,7 @@ Obtain $151P$ using double and add algorithm
 \end{enumerate}
 We obtained $151P$ using only four addition and seven doubling operation!
 \cleardoublepage
-
-Pseudo-code of double and add algorithm\\
+\textbf{Pseudo-code of double and add algorithm}\\
 Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in {0,1}$,$m =\lfloor \log_2 {n} \rfloor$
 \begin{enumerate}
 	\item $bits = [n_0,n_1,...n_m]$
@@ -380,8 +379,20 @@ Hasse's Theorem is used to estimate number of points in an elliptic curve over f
 \begin{theorem}
 Let $N$ be the number of points on an Elliptic Curve $E$ over finite field $F_q$. Then the following inequality is true
 $$|N-(q+1)|<2\sqrt{q}$$ 
+$$or$$
+$$q+1-2\sqrt{q}<N<q+1+2\sqrt{q}$$
 \end{theorem}
-\cleardoublepage
+
+\subsection{How to solve ECDLP}
+Suppose  $P$ and $Q$ are points on an Elliptic Curve $E$ over finite field $F_p$ such the $Q=nP$. The value of $P$ and $Q$ are known and we wish to find the value of $n$.\\\\
+\textbf{Exhaustive Search Method}\\
+Compute the value of $P,2P,3P...$ until you find a multiple such that it is equal to $Q$. Time complexity of this algorithm is $O(p)$.\\\\
+\textbf{Collision Search Method}\\
+Compute two lists for randomly chosen integers $m_1, m_2, . . .m_r$ and $n_1, n_2, . . .n_r$ where each integer is between $1$ and $p$.\\
+List 1: $m_1 P, m_2 P, . . .,m_r P$\\
+List 2: $n_1 P + Q, n_2 P + Q, . . ., n_r P + Q$\\
+As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of this algorithm is $O(\sqrt{p})$ by the birthday paradox.\\
+
 \section{Elliptic Diﬃe–Hellman key exchange}
 In this section we will use Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message were shared over public channel. Diffie-Hellman key exchange helps sender and receiver of the message to securely exchange cryptographic keys over public channel. It's security does depend on mathematical principle. \\\\
 Elliptic Diﬃe–Hellman Key Exchange Algorithm
