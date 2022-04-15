@@ -392,7 +392,7 @@ Compute two lists for randomly chosen integers $m_1, m_2, . . .m_r$ and $n_1, n_
 List 1: $m_1 P, m_2 P, . . .,m_r P$\\
 List 2: $n_1 P + Q, n_2 P + Q, . . ., n_r P + Q$\\
 As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of this algorithm is $O(\sqrt{p})$ by the birthday paradox.\\\\\\
-The value of $p$ is taken very large for practical purpose. For example 
+The value of $p$ is taken very large for practical purpose. For example, Secp256k1 is the name of the elliptic curve used by Bitcoin to implement its public key cryptography. The value of $p$ used by it is $p = 2^{256} – 2^{32} – 2^9 – 2^8 – 2^7 – 2^6 – 2^4 – 1$.
 \section{Elliptic Diﬃe–Hellman key exchange}
 In this section we will use Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message were shared over public channel. Diffie-Hellman key exchange helps sender and receiver of the message to securely exchange cryptographic keys over public channel. It's security does depend on mathematical principle. \\\\
 Elliptic Diﬃe–Hellman Key Exchange Algorithm
@@ -405,7 +405,20 @@ Elliptic Diﬃe–Hellman Key Exchange Algorithm
 	\item Shayam now compute $n_S Q_R$
 	\item The shared secret key is $Q=n_R Q_S=n_R (n_S P)=n_S (n_R P)=n_S Q_R$
 \end{enumerate}
-Suppose Ghanshyam wants to obtain the secret key. Ghanshyam knows the value of $P$, $Q_R$, $Q_S$ as they are available on public channel. Ghanshyam can solve Elliptic Curve Discrete Logarithm Problem i.e. the equation $Q_R = n_R P$ or $Q_S = n_S P$ to obtain the value of $n_R$ and $n_S$ respectivly. After the the value of $Q$ can be obtained using the formula $Q=n_R Q_S$ or $Q=n_S Q_R$. 
+Suppose Ghanshyam wants to obtain the secret key. Ghanshyam knows the value of $P$, $Q_R$, $Q_S$ as they are available on public channel. Ghanshyam can solve Elliptic Curve Discrete Logarithm Problem i.e. the equation $Q_R = n_R P$ or $Q_S = n_S P$ to obtain the value of $n_R$ and $n_S$ respectivly. After the the value of $Q$ can be obtained using the formula $Q=n_R Q_S$ or $Q=n_S Q_R$. \\\\
+\textbf{Example}
+Ram and Shayam want to exchange secret key using Diffie-Hellman Algorithm with the following curve, prime and point.
+$p=7$
+$E:y^2=X^3+1$
+$P=(2,3) \in E(F_7)$\\
+Ram and Shayam choose their random secret key as $n_R=5$ and $n_S=3$ respectively.\\
+Ram computes $Q_R = n_R P = 5(2,3)=(2,4) \in E(F_7)$\\
+Shayam computes $Q_S = n_S P = 3(2,3)=(6,0)\in E(F_7)$\\
+Ram and Shayam will share the value of $Q_R$ and $Q_S$ with each other.\\
+Ram computes $n_R Q_S= 5 (6,0) = (6,0)$\\
+Shayam computes $n_S Q_R= 3 (2,4) = (6,0)$\\
+
+
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}
