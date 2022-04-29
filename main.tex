@@ -116,11 +116,8 @@ captionpos=b
 \section*{Declaration}
 \addcontentsline{toc}{section}{\numberline{}Declaration}
 I hereby certify that the work which is being presented in the thesis entitled \textbf{Elliptic Curve Cryptography} in the partial fulfillment of the requirement for the award of the degree of Integrated Master of Science in Applied Mathematics
-and submitted to the Department of Mathematics, Indian Institute of Technology
-Roorkee is an authentic record of my work carried out during a period from
-January 2022 to April 2022 under the supervision of \textbf{Dr. R.K. Pandey}, Associate Professor, Mathematics Department, Indian Institute of Technology Roorkee.
-The matter presented in this report has not been submitted by me for the
-award of any other degree of this or any other institute.\\\\\\
+and submitted to the Department of Mathematics, Indian Institute of Technology Roorkee is an authentic record of my work carried out during a period from January 2022 to April 2022 under the supervision of \textbf{Dr. R.K. Pandey}, Associate Professor, Mathematics Department, Indian Institute of Technology Roorkee.
+The matter presented in this report has not been submitted by me for the award of any other degree of this or any other institute.\\\\\\
 
 \begin{tabular}{l}
 	Harsh Kumar Chourasia        \\
@@ -128,9 +125,9 @@ award of any other degree of this or any other institute.\\\\\\
 	Department of Mathematics    \\
 	IIT Roorkee                  \\
 	Date:                        \\
-	Place:                       \\
 	\bigskip
 \end{tabular}
+
 \hrule
 \bigskip
 \bigskip
@@ -143,28 +140,26 @@ This is certified that the above statement made by the candidate is  correct to 
 	Department of Mathematics \\
 	IIT Roorkee               \\
 	Date:                     \\
-	Place:                    \\
 \end{tabular}
 \cleardoublepage
 %ABSTRACT PAGE
 \section*{Abstract}
 \addcontentsline{toc}{section}{\numberline{}Abstract}
-This text discusses Cryptography using Elliptic Curves. It has many practical applications in end-to-end encryption, data and password storing, and cryptocurrencies. The motive behind this dissertation is to understand in-depth how cryptography is applied in modern technologies such as blockchain, which is the driving force behind the financial revolution of $21^{st}$ century. This dissertation is divided into two chapters. The first chapter deals with the pre-requisite from abstract algebra and number theory that is required to study elliptic curve cryptography. The second chapter deals with the introduction and algorithms of elliptic curve cryptography.
+This text discusses Cryptography using Elliptic Curves. It has many practical applications in end-to-end encryption, data and password storing, and blockchain technology. This dissertation aims to understand how the elliptic curve is used for cryptography. This dissertation is divided into five chapters. The first chapter discusses the fundamental concepts from abstract algebra and number theory which is required to study elliptic curve cryptography. The second chapter provides an introduction to cryptography and elliptic curves. The third chapter deals with the Elliptic Diffie-Hellman key exchange. The fourth chapter discusses the implementation of Elliptic Curves using javascript. Finally, the fifth chapter is used to conclude the report.
 \cleardoublepage
 %ACKNNOWEDGMENTS PAGE	
 \section*{Acknowledgments}
 \addcontentsline{toc}{section}{\numberline{}Acknowledgments}
 I would like to thank my supervisor, Ram Krishna Pandey, Department
-of Mathematics, Indian Institute of Technology Roorkee, for his guidance through each stage of the process.
+of Mathematics, Indian Institute of Technology Roorkee, for allowing me to work under his guidance. His scholarly advice, meticulous scrutiny, and encouragement have helped me greatly accomplish this task.
 
-I would finally like to thank Prof Premananda Bera, Head of Department, Department of Mathematics, Indian Institute of Technology, for permitting me to carry out this work at IIT Roorkee\\\\\\
+I would finally like to thank Prof Premananda Bera, Head of Department, Department of Mathematics, Indian Institute of Technology, for permitting me to carry out this work at IIT Roorkee.\\\\\\
 \begin{tabular}{l}
 	Harsh Kumar Chourasia        \\
 	I. M.Sc, Applied Mathematics \\
 	Department of Mathematics    \\
 	IIT Roorkee                  \\
 	Date:                        \\
-	Place:                       \\
 \end{tabular}
 
 \cleardoublepage
@@ -179,19 +174,20 @@ I would finally like to thank Prof Premananda Bera, Head of Department, Departme
 
 \chapter{Fundamental concepts}
 \large{
-	This chapter covers topics of Abstract Algebra and Number Theory that are required for cryptography and elliptic curves.}\\
-The definition of Group, Ring, Field are as follows
+	For understanding Elliptic Curve Cryptography basic understanding of Abstract Algebra, Number Theory, and probability is required. This chapter discusses the definition of algebraic structures such as group, ring, and field and the statement and proof of the famous Fermat's Little Theorem. 
+}\\
 \section{Group}
 \begin{definition}
-	The set  $G$ equipped with single operation $*$ such the $4$ below properties given below are satisfied is called a Group.\\
+	The set  $G$ equipped with single operation $*$ such the four  properties given below are satisfied is called a Group.\\
 	$(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 	$(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 	$(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
 	$(4)$ Inverse: $ \forall x \in S, \exists y \in G$ such that$x*y=0$ where $y$ is known as inverse of $x$ and is denoted by $x^{-1}$
 \end{definition}
+\cleardoublepage
 \subsection{Abelian Group}
 \begin{definition}
-	The set $G$ is equipped with  single operation $*$ such the $5$ below properties are satisfied is called a Abelian Group.\\
+	The set $G$ is equipped with single operation $*$ such the properties given below are satisfied is called a Abelian Group.\\
 	$(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 	$(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 	$(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
@@ -254,46 +250,45 @@ $$a^{p-1}\equiv 1 \pmod p$$
 
 \chapter{Elliptic Curves and Cryptography}
 \section{Introduction to Cryptography}
-The written word is the most important invention in human history. But as long as humans can share information, they have also needed to hide information. This has led to the invention of cryptography.\\
+The written word is the most important invention in human history. However, as long as humans can share information, they also need to hide information. This has led to the invention of cryptography.\\
 The word cryptography comes from Greek which means "hidden writing". According to Wikipedia \cite{enwiki:1083919625}, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
 \\Some of the application of Cryptography includes:
 \begin{itemize}
 	\item End-to-end Encryption for e-mail, messaging apps, GSM phones.
-	\item Storing Data: Biggest consumer application of cryptography includes Kindle, and iPod, which store books and songs in an encrypted format to protect copyright.
+	\item Storing Data: One of the biggest consumer application of cryptography includes Kindle, and iPod, which store books and songs in an encrypted format to protect copyright.
 	\item Storing Password: Storing passwords in plain text is not secure. If an attacker gains access to the system, they can read the password. If the password is converted into a hash using a one-way mapping function and stored. Every time a user logs in, the password will be converted into the hash and compared with the stored password.
 \end{itemize}
 There are main types of cryptography: symmetric key cryptography and asymmetric key cryptography.
 
 
 \subsection{Symmetric cryptography}
-Let Alice want to share a message m with Bob. They do so by using a common key and knowledge of some algorithm to encrypt and decrypt the message. Alice encrypts the message using the key to produce the ciphertext. Now Bob can use the key with the ciphertext to decrypt the message.
+Let Alice want to share a message with Bob. They do so by using a shared key and knowledge of some algorithm to encrypt and decrypt the message. Alice encrypts the message using the key to produce the ciphertext. Now Bob can use the key with the ciphertext to decrypt the message.
 
-In symmetric cryptography, a common key is used by the sender and receiver.
+In symmetric cryptography, a shared key is used by the sender and receiver.
 \vspace{2cm}
 
 \begin{figure}[h!]
 	\begin{center}
-		\caption{A picture of the universe!}
-		\includegraphics[scale=0.36]{sym}
+		\caption{A message exchange using a common key K}
+		\includegraphics[scale=0.37]{sym}
 	\end{center}
 \end{figure}
-
 \vspace{2cm}
 \subsection{Asymmetric cryptography}
 Asymmetric cryptography works by using private and public key pairs.
 Each user has a private, public key pair. The public key can be shared freely across the network and is used to verify the owner of a message.
-The private key is not transmitted across the network. Public key are used to encrypt the message and the private key is used to decrypt the message. The major advantage of asymmetric cryptography is that there is no need for a shared key. \\
+The private key is not transmitted across the network. Public key are used to encrypt the message and the private key is used to decrypt the message. The major advantage of asymmetric cryptography is that there is no need for a shared key. \\\\\\\\
 
 \begin{figure}[h!]
 	\begin{center}
 		\caption{A message exchange using private and public keys}
-		\includegraphics[scale=0.36]{asym}
+		\includegraphics[scale=0.42]{asym}
 	\end{center}
 \end{figure}
-
 \cleardoublepage
+
 \section{Elliptic Curves}
-Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equations. It is named after Karl Weierstrass $(1815-1897)$ who studied them in $19^{th}$ century. \\
+Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equation. It is named after Karl Weierstrass $(1815-1897)$ who studied them in $19^{th}$ century. \\\\
 \begin{definition}
 	Elliptic curves are solution sets of Weierstrass equations
 	$$E:y^2 = x^3+ax+b ...(1)$$ with  $ \{\ \mathscr{O}  $ \}\ where $\Delta_E = 4a^3+27b^2\neq 0$.
@@ -304,31 +299,29 @@ Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equations. It is name
 \begin{figure}[h!]
 	\caption{Example of Elliptic Curves}
 	\includegraphics[scale=0.30]{Figure_1}
-	\includegraphics[scale=0.30]{Figure_2}\\
-	\includegraphics[scale=0.30]{Figure_3}
-	\includegraphics[scale=0.30]{Figure_4}
+	\includegraphics[scale=0.30]{Figure_2}	
 \end{figure}
 \cleardoublepage
 If (x,y) satisfies eq(1), then (x,-y) is also a solution of equation (1). So, elliptic curves are symmetric about x-axis. \\
-The definition of addition "$+$" operator is a not the usual definition one might expect
+The definition of addition "$+$" operator is a not the usual definition one might expect\\
 $$(a,b)+(c,d) \neq (a+c,b+d)$$
-Two points $P_1$ and $P_2$ on elliptic curve. If we make a line L that passes through $P_1$ and $P_2$, it will intersect the curve at point $P_3=(x_3,y_3)$. The reflection of $P_3$ from x-axis i.e. $(x_3,-y_3)$ is called the sum of points $P_1$ and $P_2$
+\\Let $P_1$ and $P_2$ are two points on elliptic curve. If we make a line L that passes through $P_1$ and $P_2$, it will intersect the curve at point $P_3=(x_3,y_3)$. The reflection of $P_3$ from x-axis i.e. $(x_3,-y_3)$ is called the sum of points $P_1$ and $P_2$.\\
 \begin{figure}[h!]
 	\begin{center}
 		\caption{Example of $P_1+P_2$}
 		\includegraphics[scale=0.4]{2}
 	\end{center}
 \end{figure}
-So, what is $P_1+P_1$? This is the limiting case where $P_2 \to P_1$ and the Line L becomes the tangent to E at $P_1$. This line will intersect E at $P_3$. The reflection of $P_3$ about x-axis  is $P_1+P_1$.
+\\So, what is $P_1+P_1$? This is the limiting case where $P_2 \to P_1$. Line L becomes the tangent to E at $P_1$. This line will intersect E at $P_3$. The reflection of $P_3$ about x-axis  is $P_1+P_1$.\\
 \begin{figure}[h!]
 	\caption{Example of $P_1+P_1$}
 	\begin{center}
 		\includegraphics[scale=0.3]{3}
 	\end{center}
 \end{figure}
-Let's look at the case when two points on the curve when $P_1=(x,y)$ and $P_2=(x,-y)$ are added. In this case line L is $x=a$. L will not intersect the curve at third point. In this case we define
+\\Let's look at the case when two points on the curve when $P_1=(x,y)$ and $P_2=(x,-y)$ are added. In this case line L is $x=a$. L will not intersect the curve at third point. In this case we define
 $ P_1+P_2= \mathscr{O} $. We define $\mathscr{O}$  as the point in infinity that lies on every vertical line.
-If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
+If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)\\
 \begin{figure}[h!]
 	\begin{center}
 		\caption{Example of $P_1+(-P_1)=\mathscr{O}$}
@@ -347,6 +340,7 @@ If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
 		      \\$P_1+P_2 = (\lambda ^2 - x_1 - x_2, \lambda (x_1 - x_3)-y_1)$
 	\end{enumerate}
 \end{theorem}
+
 \begin{proof}
 	$(1),(2),(3)$ are true as discussed above.\\
 	(4) If $P\neq Q$ then $\lambda$ is the slope of the line passing through $P$ and $Q$. If $P=Q$ then $\lambda$ is the slope of the tangent at $P$. Suppose Line $y=\lambda x+c$ intersects the curve at $(x_3,y_3)$ in addition to $(x_1,y_1)$ and $(x_2,y_2)$.
@@ -392,7 +386,7 @@ $\lambda = \frac{1-0}{0-10} = \frac{1}{-	10} = 1 \pmod{11}$,$x_3=1-0-10=-9=2 \pm
 		The elliptic curve over finite field along with addition property forms finite group.
 	\end{theorem}
 
-	\cleardoublepage
+	
 	\section{Elliptic curve discrete logarithm problem}
 
 	\begin{definition}
@@ -402,7 +396,7 @@ $\lambda = \frac{1-0}{0-10} = \frac{1}{-	10} = 1 \pmod{11}$,$x_3=1-0-10=-9=2 \pm
 	Elliptic curve group operation is addition as described above.So, in case of elliptic curve discrete logarithm problem is described as follows:
 	Let $P,Q \in E$ such that $nP=Q$. $n$ is called elliptic discrete logarithm of $Q$ base $P$ and is denoted by $n =\log_P Q$.
 
-	It should be noted that if $Q$ is not multiple of $P$, then $n$ will not be defined. But for all practical purposes, $Q$ is obtained from repeatedly adding $P$. So $n$ will exist.
+	It should be noted that if $Q$ is not multiple of $P$, then $n$ will not be defined. However, for all practical purposes, $Q$ is obtained from repeatedly adding $P$. So $n$ will exist.
 
 	We also note that in every finite group every element has finite order. Let order of $P$ be $s$ i.e. $s P=\mathscr{O}$. If $n_0$ is the smallest number satisfying $Q=sP$. Then for all $n=n_0+is$ $ \forall i \in \mathbb{Z} $, $Q=nP$.It implies $\log_P Q$ is an element of  $\mathbb{Z}/s\mathbb{Z}$.We could also set the value to be $n_0$.But if we define the value to be in $\mathbb{Z}/s\mathbb{Z}$ the the following equation is satisfied.
 $$\log_P(Q+R)=\log_P(Q)+\log_P(R)$$
@@ -462,7 +456,7 @@ As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $
 The value of $p$ is taken very large for practical purpose. For example, Secp256k1 is the name of the elliptic curve used by Bitcoin to implement its public key cryptography. The value of $p$ used by it is $p = 2^{256} – 2^{32} – 2^9 – 2^8 – 2^7 – 2^6 – 2^4 – 1$.
 \cleardoublepage
 \chapter{Elliptic Diﬃe–Hellman key exchange}
-In this section, we will use the Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message was shared over a public channel. Diffie-Hellman key exchange helps the sender and receiver of the message to securely exchange cryptographic keys over a public channel. Its security does depend on mathematical principles. \\\\
+In this section, we will use the Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message was shared over a public channel. Diffie-Hellman key exchange helps the sender and receiver of the message to exchange cryptographic keys over a public channel securely. Its security does depend on mathematical principles. \\\\
 Elliptic Diﬃe-Hellman Key Exchange Algorithm
 \begin{enumerate}
 	\item A large prime number $p$, an Elliptic Curve $E$ over $F_p$ and a point $P \in E(F_p)$  is shared between Ram and Shayam over public channel.
@@ -479,7 +473,7 @@ Ram and Shayam want to exchange a secret key using the Diffie-Hellman Algorithm 
 $p=7$
 $E:y^2=X^3+1$
 $P=(2,3) \in E(F_7)$\\
-Ram and Shayam choose their random secret key as $n_R=5$ and $n_S=3$ respectively.\\
+Ram and Shayam choose their random secret key as $n_R=5$ and $n_S=3$.\\
 Ram computes $Q_R = n_R P = 5(2,3)=(2,4) \in E(F_7)$\\
 Shayam computes $Q_S = n_S P = 3(2,3)=(6,0)\in E(F_7)$\\
 Ram and Shayam will share the value of $Q_R$ and $Q_S$ with each other.\\
@@ -488,7 +482,8 @@ Shayam computes $n_S Q_R= 3 (2,4) = (6,0)$\\
 Ram and Shayam have shared the secret key $(6,0)$. They will use x-coordinate as the shared key and ignore y-coordinate.
 \cleardoublepage
 \chapter{Implementation}
-This chapter deals with the implmentation of ECC using javascript.\\\\
+This chapter deals with the implementation of ECC using javascript. 
+\\\\
 \begin{lstlisting}[language=JavaScript]
 INF_POINT = null;
 class EllipticCurve {
@@ -579,4 +574,5 @@ console.log(ec.doubleAndAddAlgorithm(5, [2, 4]));
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}
+
 
