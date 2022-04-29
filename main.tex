@@ -98,7 +98,7 @@ captionpos=b
 	{\Large\itshape Harsh Kumar Chourasia\par}
 	\vspace{0.5cm}
 	supervised by\\
-	Dr. Ram Krishna Panday
+	Dr. Ram Krishna Pandey
 	\vspace{0.5cm}
 
 	\includegraphics[scale=0.75]{logo}
@@ -119,11 +119,10 @@ captionpos=b
 \pagenumbering{roman}
 \section*{Declaration}
 \addcontentsline{toc}{section}{\numberline{}Declaration}
-I hereby certify that the work which is being presented in the thesis entitled \textbf{Elliptic Curve Cryptography} in the partial fulfillment of the requirement
-for the award of the degree of Integrated Master of Science in Applied Mathematics
+I hereby certify that the work which is being presented in the thesis entitled \textbf{Elliptic Curve Cryptography} in the partial fulfillment of the requirement for the award of the degree of Integrated Master of Science in Applied Mathematics
 and submitted to the Department of Mathematics, Indian Institute of Technology
-Roorkee, is an authentic record of my own work carried out during a period from
-January 2022 to April 2022 under the supervision of \textbf{Dr. R.K. Panday}, Associate Professor, Mathematics Department, Indian Institute of Technology Roorkee.
+Roorkee is an authentic record of my work carried out during a period from
+January 2022 to April 2022 under the supervision of \textbf{Dr. R.K. Pandey}, Associate Professor, Mathematics Department, Indian Institute of Technology Roorkee.
 The matter presented in this report has not been submitted by me for the
 award of any other degree of this or any other institute.\\\\\\
 
@@ -140,10 +139,10 @@ award of any other degree of this or any other institute.\\\\\\
 \bigskip
 \bigskip
 \noindent{\large{\textbf{CERTIFICATE}}} \\\\
-This is certified that the above statement made by the candidate is correct to the best of my knowledge.\\\\\\
+This is certified that the above statement made by the candidate is  correct to the best of my knowledge.\\\\\\
 \vspace{1cm}
 \begin{tabular}{l}
-	Dr. RK Panday             \\
+	Dr. RK Pandey             \\
 	Associate Professor       \\
 	Department of Mathematics \\
 	IIT Roorkee               \\
@@ -154,15 +153,15 @@ This is certified that the above statement made by the candidate is correct to t
 %ABSTRACT PAGE
 \section*{Abstract}
 \addcontentsline{toc}{section}{\numberline{}Abstract}
-This text discuss about Cryptography using Elliptic Curves. It has many practical applications in end-to-end encryption, data and password storing, cryptocurrencies. The motive behind this dissertation is to understand in depth how cryptography is applied in modern technologies such as blockchain which is driving force behind financial revolution of $21^{st}$ century. This dissertation is divided into two chapters. The first chapter deals with the pre-requisite from abstract algebra and number theory that is required to study elliptic curve cryptography. The second chapter deals with the introduction and algorithms of elliptic curve cryptography.
+This text discusses Cryptography using Elliptic Curves. It has many practical applications in end-to-end encryption, data and password storing, and cryptocurrencies. The motive behind this dissertation is to understand in-depth how cryptography is applied in modern technologies such as blockchain, which is the driving force behind the financial revolution of $21^{st}$ century. This dissertation is divided into two chapters. The first chapter deals with the pre-requisite from abstract algebra and number theory that is required to study elliptic curve cryptography. The second chapter deals with the introduction and algorithms of elliptic curve cryptography.
 \cleardoublepage
 %ACKNNOWEDGMENTS PAGE	
 \section*{Acknowledgments}
 \addcontentsline{toc}{section}{\numberline{}Acknowledgments}
-I would like to thank my supervisor, Ram Krishna Panday, Department
-of Mathematics, Indian Institute of Technology Roorkee for his guidance through each stage of the process.
+I would like to thank my supervisor, Ram Krishna Pandey, Department
+of Mathematics, Indian Institute of Technology Roorkee, for his guidance through each stage of the process.
 
-I would finally like to thank Prof Premananda Bera, Head of Department, Department of Mathematics, Indian Institute of Technology for giving me the permission to carry out this work at IIT Roorkee\\\\\\
+I would finally like to thank Prof Premananda Bera, Head of Department, Department of Mathematics, Indian Institute of Technology, for permitting me to carry out this work at IIT Roorkee\\\\\\
 \begin{tabular}{l}
 	Harsh Kumar Chourasia        \\
 	I. M.Sc, Applied Mathematics \\
@@ -207,7 +206,7 @@ So, a abelian group G is a group with $\forall x,y \in G, x*y=y*x$
 
 \section{Ring}
 \begin{definition}
-	A ring is a set $R$ with two operations $+$ and $*$ which satisfy the below properties\\
+	Ring is a set $R$ with two operations $+$ and $*$ which satisfy the below properties\\
 	$(1)$ It is abelian group under $+$ \\
 	$(2)$ Closure under $*$:  $x,y \in R \Rightarrow	x*y \in R $  \\
 	$(3)$ Associative under $*$: $x,y,z \in R \Rightarrow	(x*y)*z=x*(y*z) $\\
@@ -216,7 +215,7 @@ So, a abelian group G is a group with $\forall x,y \in G, x*y=y*x$
 \end{definition}
 \section{Field}
 \begin{definition}
-	A Field is a set $F$ with two operations $+$ and $*$ with following properties \\
+	Field is a set $F$ with two operations $+$ and $*$ with following properties \\
 	$(1)$Commutative group under $+$\\
 	$(2)$Commutative group under $*$\\
 	$(3)$Distributive property $x,y,z \in F$
@@ -258,21 +257,21 @@ $$a^{p-1}\equiv 1 \pmod p$$
 
 \chapter{Elliptic Curves and Cryptography}
 \section{Introduction to Cryptography}
-The written word is the most important invention in human history. But as long as human has the ability to share information, they have also had the need to conceal that information as well. This need lead to invention of cryptography.\\
-The word cryptography comes from greek which means "hidden writing". According to Wikipedia, \textbf{Cryptography, or cryptology is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
+The written word is the most important invention in human history. But as long as humans can share information, they have also needed to hide information. This has led to the invention of cryptography.\\
+The word cryptography comes from Greek which means "hidden writing". According to Wikipedia, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
 \\Some of the application of Cryptography includes:
 \begin{itemize}
 	\item End-to-end Encryption for e-mail, messaging apps, GSM phones.
-	\item Storing Data: Biggest consumer application of cryptography includes Kindle, iPod which stores books and songs in encrypted format to protect copyright.
-	\item Storing Password: Storing passwords in plane text is not secure. If an attacker has access to the system they can read the password. If the password is converted into hash using one way mapping function and stored. Every time a user logs in, the password will be converted into hash and compared with the stored password.
+	\item Storing Data: Biggest consumer application of cryptography includes Kindle, and iPod, which store books and songs in an encrypted format to protect copyright.
+	\item Storing Password: Storing passwords in plain text is not secure. If an attacker gains access to the system, they can read the password. If the password is converted into a hash using a one-way mapping function and stored. Every time a user logs in, the password will be converted into the hash and compared with the stored password.
 \end{itemize}
-There are mainly two type of cryptography: Symmetric key cryptography and Asymmetric key cryptography.
+There are main types of cryptography: symmetric key cryptography and asymmetric key cryptography.
 
 
 \subsection{Symmetric cryptography}
-Let Alice want to share a message m with Bob. They do so by using a common key and knowledge of some algorithm to encrypt and decrypt message. Alice encrypts the message using the key to produce the cipher text. Now Bob can use key with cipher text to decrypt message.
+Let Alice want to share a message m with Bob. They do so by using a common key and knowledge of some algorithm to encrypt and decrypt the message. Alice encrypts the message using the key to produce the ciphertext. Now Bob can use the key with the ciphertext to decrypt the message.
 
-In symmetric cryptography a common key is used by the sender and receiver.
+In symmetric cryptography, a common key is used by the sender and receiver.
 \vspace{2cm}
 
 \begin{figure}[h!]
@@ -285,8 +284,8 @@ In symmetric cryptography a common key is used by the sender and receiver.
 \vspace{2cm}
 \subsection{Asymmetric cryptography}
 Asymmetric cryptography works by using private and public key pairs.
-Each user has a private,public key pair. Public key can be shared freely across the network and is used to verify the owner of a message.
-Private keys is not transmitted across the network. Public are used to encrypt the message and private key is used to decrypt the message. The major advantage of asymmetric cryptography is that there is no need of a shared key. \\
+Each user has a private, public key pair. The public key can be shared freely across the network and is used to verify the owner of a message.
+The private key is not transmitted across the network. Public key are used to encrypt the message and the private key is used to decrypt the message. The major advantage of asymmetric cryptography is that there is no need for a shared key. \\
 
 \begin{figure}[h!]
 	\begin{center}
@@ -369,7 +368,7 @@ If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
 \end{theorem}
 \begin{proof}
 	(1) Claim: $P_1+\mathscr{O}=P_1$ \\
-	If a line is drawn through P and $\mathscr{O}$ it will intersect E at -P. Reflection of -P from x-axis is again P. So, $P_1+\mathscr{O}=P_1$
+	If a line is drawn through P and $\mathscr{O}$, it will intersect E at -P. Reflection of -P from x-axis is again P. So, $P_1+\mathscr{O}=P_1$
 	Similarly, $\mathscr{O}+P_1=P_1$\\
 	(2) Explained above in equation (2)\\
 	(3) Associative property is non-trivial to prove using geometry. It can be verified by using Theorem 2 by calculation using substitution.\\
@@ -407,7 +406,7 @@ $\lambda = \frac{1-0}{0-10} = \frac{1}{-	10} = 1 \pmod{11}$,$x_3=1-0-10=-9=2 \pm
 	Elliptic curve group operation is addition as described above.So, in case of elliptic curve discrete logarithm problem is described as follows:
 	Let $P,Q \in E$ such that $nP=Q$. $n$ is called elliptic discrete logarithm of $Q$ base $P$ and is denoted by $n =\log_P Q$.
 
-	It should be noted that if $Q$ is not multiple of $P$ then $n$ will not be defined. But for all practical purposes $Q$ is obtained from repeatedly adding $P$. So $n$ will exist.
+	It should be noted that if $Q$ is not multiple of $P$, then $n$ will not be defined. But for all practical purposes, $Q$ is obtained from repeatedly adding $P$. So $n$ will exist.
 
 	We also note that in every finite group every element has finite order. Let order of $P$ be $s$ i.e. $s P=\mathscr{O}$. If $n_0$ is the smallest number satisfying $Q=sP$. Then for all $n=n_0+is$ $ \forall i \in \mathbb{Z} $, $Q=nP$.It implies $\log_P Q$ is an element of  $\mathbb{Z}/s\mathbb{Z}$.We could also set the value to be $n_0$.But if we define the value to be in $\mathbb{Z}/s\mathbb{Z}$ the the following equation is satisfied.
 $$\log_P(Q+R)=\log_P(Q)+\log_P(R)$$
@@ -447,9 +446,9 @@ Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in {0,1}$,$m =\lfloor \log
 	\item return result
 \end{enumerate}
 \subsection{Hasse's Theorem}
-Hasse's Theorem is used to estimate number of points in an elliptic curve over finite field. We state Hasse's theorem without proof.
+Hasse's theorem estimates the number of points in an elliptic curve over a finite field. We state Hasse's theorem without proof.
 \begin{theorem}
-	Let $N$ be the number of points on an Elliptic Curve $E$ over finite field $F_q$. Then the following inequality is true
+	Let $N$ is the number of points on an Elliptic Curve $E$ over finite field $F_q$. Then the following inequality is true
 	$$|N-(q+1)|<2\sqrt{q}$$
 	$$or$$
 	$$q+1-2\sqrt{q}<N<q+1+2\sqrt{q}$$
@@ -463,11 +462,11 @@ Compute the value of $P,2P,3P...$ until you find a multiple such that it is equa
 Compute two lists for randomly chosen integers $m_1, m_2, . . .m_r$ and $n_1, n_2, . . .n_r$ where each integer is between $1$ and $p$.\\
 List 1: $m_1 P, m_2 P, . . .,m_r P$\\
 List 2: $n_1 P + Q, n_2 P + Q, . . ., n_r P + Q$\\
-As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of this algorithm is $O(\sqrt{p})$ by the birthday paradox.\\\\\\
+As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of collision search method is $O(\sqrt{p})$ by the birthday paradox.\\\\\\
 The value of $p$ is taken very large for practical purpose. For example, Secp256k1 is the name of the elliptic curve used by Bitcoin to implement its public key cryptography. The value of $p$ used by it is $p = 2^{256} – 2^{32} – 2^9 – 2^8 – 2^7 – 2^6 – 2^4 – 1$.
 \cleardoublepage
 \chapter{Elliptic Diﬃe–Hellman key exchange}
-In this section we will use Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message were shared over public channel. Diffie-Hellman key exchange helps sender and receiver of the message to securely exchange cryptographic keys over public channel. It's security does depend on mathematical principle. \\\\
+In this section, we will use the Elliptic curve to do cryptography. The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically and then the encrypted message was shared over a public channel. Diffie-Hellman key exchange helps the sender and receiver of the message to securely exchange cryptographic keys over a public channel. Its security does depend on mathematical principles. \\\\
 Elliptic Diﬃe-Hellman Key Exchange Algorithm
 \begin{enumerate}
 	\item A large prime number $p$, an Elliptic Curve $E$ over $F_p$ and a point $P \in E(F_p)$  is shared between Ram and Shayam over public channel.
@@ -478,9 +477,9 @@ Elliptic Diﬃe-Hellman Key Exchange Algorithm
 	\item Shayam now compute $n_S Q_R$
 	\item The shared secret key is $Q=n_R Q_S=n_R (n_S P)=n_S (n_R P)=n_S Q_R$
 \end{enumerate}
-Suppose Ghanshyam wants to obtain the secret key. Ghanshyam knows the value of $P$, $Q_R$, $Q_S$ as they are available on public channel. Ghanshyam can solve Elliptic Curve Discrete Logarithm Problem i.e. the equation $Q_R = n_R P$ or $Q_S = n_S P$ to obtain the value of $n_R$ and $n_S$ respectively. After the the value of $Q$ can be obtained using the formula $Q=n_R Q_S$ or $Q=n_S Q_R$. \\\\
+Suppose Ghanshyam wants to obtain the secret key. Ghanshyam knows the value of $P$, $Q_R$, $Q_S$ as they are available on the public channel. Ghanshyam can solve Elliptic Curve Discrete Logarithm Problem, i.e., the equation $Q_R = n_R P$ or $Q_S = n_S P$ to obtain the value of $n_R$ and $n_S$ respectively. After the value of $Q$ can be obtained using the formula $Q=n_R Q_S$ or $Q=n_S Q_R$. \\\\
 \textbf{Example}
-Ram and Shayam want to exchange secret key using Diffie-Hellman Algorithm with the following curve, prime and point.
+Ram and Shayam want to exchange a secret key using the Diffie-Hellman Algorithm with the following curve, prime and point.
 $p=7$
 $E:y^2=X^3+1$
 $P=(2,3) \in E(F_7)$\\
@@ -579,8 +578,9 @@ console.log(ec.points);
 console.log(ec.doubleAndAddAlgorithm(5, [2, 4]));
 
 \end{lstlisting}
-
+\chapter{Conclusion}
 
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}
+
