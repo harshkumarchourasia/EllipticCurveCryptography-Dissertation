@@ -111,10 +111,6 @@ captionpos=b
 	{\scshape\large Roorkee-247667\par}
 	\endgroup
 \end{titlepage}
-
-
-
-
 %DECLARATION PAGE
 \pagenumbering{roman}
 \section*{Declaration}
@@ -181,13 +177,13 @@ I would finally like to thank Prof Premananda Bera, Head of Department, Departme
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\chapter{Pre-requisite}
+\chapter{Fundamental concepts}
 \large{
 	This chapter covers topics of Abstract Algebra and Number Theory that are required for cryptography and elliptic curves.}\\
-This definition of Group, Ring, Field are as follows
+The definition of Group, Ring, Field are as follows
 \section{Group}
 \begin{definition}
-	The set  $G$ is equipped with  single operation $*$ such the the $4$ below properties are satisfied is called a Group.\\
+	The set  $G$ equipped with single operation $*$ such the $4$ below properties given below are satisfied is called a Group.\\
 	$(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 	$(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 	$(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
@@ -195,7 +191,7 @@ This definition of Group, Ring, Field are as follows
 \end{definition}
 \subsection{Abelian Group}
 \begin{definition}
-	The set $G$ is equipped with  single operation $*$ such the the $5$ below properties are satisfied is called a Abelian Group.\\
+	The set $G$ is equipped with  single operation $*$ such the $5$ below properties are satisfied is called a Abelian Group.\\
 	$(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 	$(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 	$(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
@@ -226,10 +222,11 @@ So, a abelian group G is a group with $\forall x,y \in G, x*y=y*x$
 	Let p be any prime number. For any number a such that $p\nmid a$. Then
 	$a^{p-1}\equiv 1\pmod p$\\
 \end{theorem}
-Proof: Assume p is a prime number and $p \nmid a$ \\
+\begin{proof}
+Assume p is a prime number and $p \nmid a$ \\
 Every integer is congruent to one of $0,1,2,\cdots,p-1\pmod p$\\
 Only focus on non zero congruence classes, because $0 \pmod p$ contains all the multiples of p (and $p \nmid a$).
-Focus on $0,1,2,\cdots,p-1$\\
+Focus on $0,1,\cdots,p-1$\\
 Multiply all of these by a:
 $$a,2a,\cdots,(p-1)a$$
 Show that this is a rearrangement of $0,1,2,\cdots,p-1$\\
@@ -250,7 +247,7 @@ So, $p\nmid(r-s)$ which means $a,2a,\cdots,(p-1)a$ is a rearrangement of\\ $1,2,
 $$a,2a,\cdots,(p-1)a\equiv 1,2,\cdots,(p-1) \pmod p$$
 $$(p-1)!a^{p-1}\equiv (p-1)! \pmod p$$
 $$a^{p-1}\equiv 1 \pmod p$$
-
+\end{proof} 
 
 
 \cleardoublepage
@@ -258,7 +255,7 @@ $$a^{p-1}\equiv 1 \pmod p$$
 \chapter{Elliptic Curves and Cryptography}
 \section{Introduction to Cryptography}
 The written word is the most important invention in human history. But as long as humans can share information, they have also needed to hide information. This has led to the invention of cryptography.\\
-The word cryptography comes from Greek which means "hidden writing". According to Wikipedia, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
+The word cryptography comes from Greek which means "hidden writing". According to Wikipedia \cite{enwiki:1083919625}, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
 \\Some of the application of Cryptography includes:
 \begin{itemize}
 	\item End-to-end Encryption for e-mail, messaging apps, GSM phones.
@@ -294,7 +291,7 @@ The private key is not transmitted across the network. Public key are used to en
 	\end{center}
 \end{figure}
 
-
+\cleardoublepage
 \section{Elliptic Curves}
 Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equations. It is named after Karl Weierstrass $(1815-1897)$ who studied them in $19^{th}$ century. \\
 \begin{definition}
@@ -374,7 +371,6 @@ If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
 	(3) Associative property is non-trivial to prove using geometry. It can be verified by using Theorem 2 by calculation using substitution.\\
 	(4) is true as line passing through $P_1$ and $P_2$ is same as the line passing through $P_2$ and $P_1$.
 \end{proof}
-\cleardoublepage
 \section{Elliptic curves over finite fields}
 \begin{definition}
 	Elliptic curve over a finite field $F_p$ is defined as equation of the form $$E:y^2 = x^3+ax+b$$ where $a,b\in F_p$ and $\Delta_E = 4a^3+27b^2\neq 0$.
@@ -462,7 +458,7 @@ Compute the value of $P,2P,3P...$ until you find a multiple such that it is equa
 Compute two lists for randomly chosen integers $m_1, m_2, . . .m_r$ and $n_1, n_2, . . .n_r$ where each integer is between $1$ and $p$.\\
 List 1: $m_1 P, m_2 P, . . .,m_r P$\\
 List 2: $n_1 P + Q, n_2 P + Q, . . ., n_r P + Q$\\
-As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of collision search method is $O(\sqrt{p})$ by the birthday paradox.\\\\\\
+As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of collision search method is $O(\sqrt{p})$ by the birthday paradox\cite{hoffstein2008introduction}.\\\\\\
 The value of $p$ is taken very large for practical purpose. For example, Secp256k1 is the name of the elliptic curve used by Bitcoin to implement its public key cryptography. The value of $p$ used by it is $p = 2^{256} – 2^{32} – 2^9 – 2^8 – 2^7 – 2^6 – 2^4 – 1$.
 \cleardoublepage
 \chapter{Elliptic Diﬃe–Hellman key exchange}
@@ -491,8 +487,8 @@ Ram computes $n_R Q_S= 5 (6,0) = (6,0)$\\
 Shayam computes $n_S Q_R= 3 (2,4) = (6,0)$\\
 Ram and Shayam have shared the secret key $(6,0)$. They will use x-coordinate as the shared key and ignore y-coordinate.
 \cleardoublepage
-
 \chapter{Implementation}
+This chapter deals with the implmentation of ECC using javascript.\\\\
 \begin{lstlisting}[language=JavaScript]
 INF_POINT = null;
 class EllipticCurve {

@@ -111,17 +111,13 @@ captionpos=b
 	{\scshape\large Roorkee-247667\par}
 	\endgroup
 \end{titlepage}
-
-
-
-
 %DECLARATION PAGE
 \pagenumbering{roman}
 \section*{Declaration}
 \addcontentsline{toc}{section}{\numberline{}Declaration}
 I hereby certify that the work which is being presented in the thesis entitled \textbf{Elliptic Curve Cryptography} in the partial fulfillment of the requirement for the award of the degree of Integrated Master of Science in Applied Mathematics
 and submitted to the Department of Mathematics, Indian Institute of Technology
-Roorkee is an authentic record of my own work carried out during a period from
+Roorkee is an authentic record of my work carried out during a period from
 January 2022 to April 2022 under the supervision of \textbf{Dr. R.K. Pandey}, Associate Professor, Mathematics Department, Indian Institute of Technology Roorkee.
 The matter presented in this report has not been submitted by me for the
 award of any other degree of this or any other institute.\\\\\\
@@ -161,7 +157,7 @@ This text discusses Cryptography using Elliptic Curves. It has many practical ap
 I would like to thank my supervisor, Ram Krishna Pandey, Department
 of Mathematics, Indian Institute of Technology Roorkee, for his guidance through each stage of the process.
 
-I would finally like to thank Prof Premananda Bera, Head of Department, Department of Mathematics, Indian Institute of Technology, for giving me the permission to carry out this work at IIT Roorkee\\\\\\
+I would finally like to thank Prof Premananda Bera, Head of Department, Department of Mathematics, Indian Institute of Technology, for permitting me to carry out this work at IIT Roorkee\\\\\\
 \begin{tabular}{l}
 	Harsh Kumar Chourasia        \\
 	I. M.Sc, Applied Mathematics \\
@@ -181,13 +177,13 @@ I would finally like to thank Prof Premananda Bera, Head of Department, Departme
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\chapter{Pre-requisite}
+\chapter{Fundamental concepts}
 \large{
 	This chapter covers topics of Abstract Algebra and Number Theory that are required for cryptography and elliptic curves.}\\
-This definition of Group, Ring, Field are as follows
+The definition of Group, Ring, Field are as follows
 \section{Group}
 \begin{definition}
-	The set  $G$ is equipped with  single operation $*$ such the the $4$ below properties are satisfied is called a Group.\\
+	The set  $G$ equipped with single operation $*$ such the $4$ below properties given below are satisfied is called a Group.\\
 	$(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 	$(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 	$(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
@@ -195,7 +191,7 @@ This definition of Group, Ring, Field are as follows
 \end{definition}
 \subsection{Abelian Group}
 \begin{definition}
-	The set $G$ is equipped with  single operation $*$ such the the $5$ below properties are satisfied is called a Abelian Group.\\
+	The set $G$ is equipped with  single operation $*$ such the $5$ below properties are satisfied is called a Abelian Group.\\
 	$(1)$ Closure: $\forall x,y \in G, x*y \in G$ \\
 	$(2)$ Additive identity: $\exists 0 \in G$, such that $ \forall x \in G$, $ 0*x=x*0=x$\\
 	$(3)$ Associative Property: $ \forall x,y,z \in G$, $(x*y)*z=x*(y*z)$ \\
@@ -206,7 +202,7 @@ So, a abelian group G is a group with $\forall x,y \in G, x*y=y*x$
 
 \section{Ring}
 \begin{definition}
-	A ring is a set $R$ with two operations $+$ and $*$ which satisfy the below properties\\
+	Ring is a set $R$ with two operations $+$ and $*$ which satisfy the below properties\\
 	$(1)$ It is abelian group under $+$ \\
 	$(2)$ Closure under $*$:  $x,y \in R \Rightarrow	x*y \in R $  \\
 	$(3)$ Associative under $*$: $x,y,z \in R \Rightarrow	(x*y)*z=x*(y*z) $\\
@@ -215,7 +211,7 @@ So, a abelian group G is a group with $\forall x,y \in G, x*y=y*x$
 \end{definition}
 \section{Field}
 \begin{definition}
-	A Field is a set $F$ with two operations $+$ and $*$ with following properties \\
+	Field is a set $F$ with two operations $+$ and $*$ with following properties \\
 	$(1)$Commutative group under $+$\\
 	$(2)$Commutative group under $*$\\
 	$(3)$Distributive property $x,y,z \in F$
@@ -226,10 +222,11 @@ So, a abelian group G is a group with $\forall x,y \in G, x*y=y*x$
 	Let p be any prime number. For any number a such that $p\nmid a$. Then
 	$a^{p-1}\equiv 1\pmod p$\\
 \end{theorem}
-Proof: Assume p is a prime number and $p \nmid a$ \\
+\begin{proof}
+Assume p is a prime number and $p \nmid a$ \\
 Every integer is congruent to one of $0,1,2,\cdots,p-1\pmod p$\\
 Only focus on non zero congruence classes, because $0 \pmod p$ contains all the multiples of p (and $p \nmid a$).
-Focus on $0,1,2,\cdots,p-1$\\
+Focus on $0,1,\cdots,p-1$\\
 Multiply all of these by a:
 $$a,2a,\cdots,(p-1)a$$
 Show that this is a rearrangement of $0,1,2,\cdots,p-1$\\
@@ -250,22 +247,22 @@ So, $p\nmid(r-s)$ which means $a,2a,\cdots,(p-1)a$ is a rearrangement of\\ $1,2,
 $$a,2a,\cdots,(p-1)a\equiv 1,2,\cdots,(p-1) \pmod p$$
 $$(p-1)!a^{p-1}\equiv (p-1)! \pmod p$$
 $$a^{p-1}\equiv 1 \pmod p$$
-
+\end{proof} 
 
 
 \cleardoublepage
 
 \chapter{Elliptic Curves and Cryptography}
 \section{Introduction to Cryptography}
-The written word is the most important invention in human history. But as long as human has the ability to share information, they have also had the need to conceal that information as well. This need led to the invention of cryptography.\\
-The word cryptography comes from Greek which means "hidden writing". According to Wikipedia, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
+The written word is the most important invention in human history. But as long as humans can share information, they have also needed to hide information. This has led to the invention of cryptography.\\
+The word cryptography comes from Greek which means "hidden writing". According to Wikipedia \cite{enwiki:1083919625}, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
 \\Some of the application of Cryptography includes:
 \begin{itemize}
 	\item End-to-end Encryption for e-mail, messaging apps, GSM phones.
 	\item Storing Data: Biggest consumer application of cryptography includes Kindle, and iPod, which store books and songs in an encrypted format to protect copyright.
-	\item Storing Password: Storing passwords in plain text is not secure. If an attacker has access to the system, they can read the password. If the password is converted into a hash using a one-way mapping function and stored. Every time a user logs in, the password will be converted into the hash and compared with the stored password.
+	\item Storing Password: Storing passwords in plain text is not secure. If an attacker gains access to the system, they can read the password. If the password is converted into a hash using a one-way mapping function and stored. Every time a user logs in, the password will be converted into the hash and compared with the stored password.
 \end{itemize}
-There are mainly two types of cryptography: symmetric key cryptography and asymmetric key cryptography.
+There are main types of cryptography: symmetric key cryptography and asymmetric key cryptography.
 
 
 \subsection{Symmetric cryptography}
@@ -294,7 +291,7 @@ The private key is not transmitted across the network. Public key are used to en
 	\end{center}
 \end{figure}
 
-
+\cleardoublepage
 \section{Elliptic Curves}
 Equation of type $ y^2 = x^3+ax+b $ are called Weierstrass equations. It is named after Karl Weierstrass $(1815-1897)$ who studied them in $19^{th}$ century. \\
 \begin{definition}
@@ -374,7 +371,6 @@ If P = (x,y) then -P is defined as (x,-y). So, $P+(-P)=\mathscr{O}$...(2)
 	(3) Associative property is non-trivial to prove using geometry. It can be verified by using Theorem 2 by calculation using substitution.\\
 	(4) is true as line passing through $P_1$ and $P_2$ is same as the line passing through $P_2$ and $P_1$.
 \end{proof}
-\cleardoublepage
 \section{Elliptic curves over finite fields}
 \begin{definition}
 	Elliptic curve over a finite field $F_p$ is defined as equation of the form $$E:y^2 = x^3+ax+b$$ where $a,b\in F_p$ and $\Delta_E = 4a^3+27b^2\neq 0$.
@@ -446,9 +442,9 @@ Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in {0,1}$,$m =\lfloor \log
 	\item return result
 \end{enumerate}
 \subsection{Hasse's Theorem}
-Hasse's theorem is used to estimate the number of points in an elliptic curve over a finite field. We state Hasse's theorem without proof.
+Hasse's theorem estimates the number of points in an elliptic curve over a finite field. We state Hasse's theorem without proof.
 \begin{theorem}
-	Let $N$ be the number of points on an Elliptic Curve $E$ over finite field $F_q$. Then the following inequality is true
+	Let $N$ is the number of points on an Elliptic Curve $E$ over finite field $F_q$. Then the following inequality is true
 	$$|N-(q+1)|<2\sqrt{q}$$
 	$$or$$
 	$$q+1-2\sqrt{q}<N<q+1+2\sqrt{q}$$
@@ -462,7 +458,7 @@ Compute the value of $P,2P,3P...$ until you find a multiple such that it is equa
 Compute two lists for randomly chosen integers $m_1, m_2, . . .m_r$ and $n_1, n_2, . . .n_r$ where each integer is between $1$ and $p$.\\
 List 1: $m_1 P, m_2 P, . . .,m_r P$\\
 List 2: $n_1 P + Q, n_2 P + Q, . . ., n_r P + Q$\\
-As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of this algorithm is $O(\sqrt{p})$ by the birthday paradox.\\\\\\
+As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of collision search method is $O(\sqrt{p})$ by the birthday paradox\cite{hoffstein2008introduction}.\\\\\\
 The value of $p$ is taken very large for practical purpose. For example, Secp256k1 is the name of the elliptic curve used by Bitcoin to implement its public key cryptography. The value of $p$ used by it is $p = 2^{256} – 2^{32} – 2^9 – 2^8 – 2^7 – 2^6 – 2^4 – 1$.
 \cleardoublepage
 \chapter{Elliptic Diﬃe–Hellman key exchange}
@@ -491,8 +487,9 @@ Ram computes $n_R Q_S= 5 (6,0) = (6,0)$\\
 Shayam computes $n_S Q_R= 3 (2,4) = (6,0)$\\
 Ram and Shayam have shared the secret key $(6,0)$. They will use x-coordinate as the shared key and ignore y-coordinate.
 \cleardoublepage
-
 \chapter{Implementation}
+This chapter deals with the implmentation of ECC using javascript.
+\\\\
 \begin{lstlisting}[language=JavaScript]
 INF_POINT = null;
 class EllipticCurve {
