@@ -425,7 +425,7 @@ Obtain $151P$ using double and add algorithm
 	\item Keep Doubling $16P$ till $128P$ is obtained
 	\item Add $128P$ to the result (result will be $2^7P+2^4P+2^2P+2^1P+2^0P$)
 \end{enumerate}
-We obtained $151P$ using only four addition and seven doubling operation!
+We obtained $151P$ using only four addition and seven doubling operations!
 \\\\\\
 \textbf{Pseudo-code of double and add algorithm}\\
 Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in \{0,1\}$\\$m =\lfloor \log_2 {n} \rfloor$
@@ -485,11 +485,11 @@ Ram computes $n_R Q_S= 5 (6,0) = (6,0)$\\
 Shayam computes $n_S Q_R= 3 (2,4) = (6,0)$\\
 Ram and Shayam have shared the secret key $(6,0)$. They will use x-coordinate as the shared key and ignore y-coordinate.
 \section{ElGamal Elliptic Curve Cryptosystem}
-ElGamal Elliptic Curve Cryptosystem is an example of asymmeteric key cryptography. It is similar to Diffie-Hellman key exchange algorithm but is used to securely exchange messages over public channel. Now let's have a look on the example where Shayam wants to share a message with Ram using ElGamal Elliptic Curve Cryptosystem.
+ElGamal Elliptic Curve Cryptosystem is an example of asymmetric key cryptography. It is similar to the Diffie-Hellman key exchange algorithm but is used securely to exchange messages over the public channel. Now let us look at the example where Shayam wants to share a message with Ram using ElGamal Elliptic Curve Cryptosystem.
 \cleardoublepage
 ElGamal Elliptic Curve Cryptosystem
 \begin{enumerate}
-\item A large prime number $p$, an Elliptic Curve $E$ over $F_p$ and a point $P \in E(F_p)$  is shared between Ram and Shayam over public channel.
+\item A large prime number $p$, an Elliptic Curve $E$ over $F_p$ and a point $P \in E(F_p)$  is shared between Ram and Shayam over a public channel.
  \item Ram chooses a large secret random number $n_R$ and computes $Q_R = n_R P$. $Q_R$ is Ram's public key.  
  \item Shayam chooses a plain text $M$ such that $M \in E(F_p)$.
  \item Shayam chooses a transitory key $k\in \mathbb{Z}$ and computes and shares $X_1$ and $X_2$ with Ram
@@ -497,7 +497,8 @@ ElGamal Elliptic Curve Cryptosystem
  $$X_2 = M+k Q_R$$
  \item Ram will obtain $M$ from $n_R$, $X_1$ and $X_2$ using the formula given below
  $$X_2-n_R X_1=M+k Q_R- n_R (k P)=M$$
- One of the drawback of this method is to attach plain text to a point in $ E(F_p)$. One of the proposed solution for this is to use probablistic algorithm \cite{7033751} for this with a small chance of failure.
+ One of the drawbacks of this method is to attach plain text to a point in $ E(F_p)$. One of the proposed solutions for this is to use a probabilistic algorithm for this with a small chance of failure. Let's say you need to encrypt a text file. The proposed solution is taken from \cite{7033751}. Because each point on the elliptic curve could be directly transferred to an ASCII value, pick a Elliptic curve with a minimum of 128 points (because there are 8-bits in the ASCII character) so that we can assign an ASCII value to each point. For example, MATHS can be written as
+sequence of ASCII characters that is ‘77’ ‘65’ ‘84’ ‘72’ ‘83’
 \end{enumerate}
 \cleardoublepage
 \chapter{Implementation}
@@ -592,6 +593,7 @@ console.log(ec.doubleAndAddAlgorithm(5, [2, 4]));
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}
+
 
 
 
