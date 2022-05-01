@@ -174,7 +174,7 @@ I would finally like to thank Prof Premananda Bera, Head of Department, Departme
 
 \chapter{Fundamental concepts}
 \large{
-	For understanding Elliptic Curve Cryptography basic understanding of Abstract Algebra, Number Theory, and probability is required. This chapter discusses the definition of algebraic structures such as group, ring, and field and the statement and proof of the famous Fermat's Little Theorem. 
+	For understanding Elliptic Curve Cryptography basic understanding of Abstract Algebra, Number Theory, and probability is required. This chapter discusses the definition of algebraic structures such as group, ring, and field and the statement and proof of the famous Fermat’s Little Theorem. 
 }\\
 \section{Group}
 \begin{definition}
@@ -251,7 +251,7 @@ $$a^{p-1}\equiv 1 \pmod p$$
 \chapter{Elliptic Curves and Cryptography}
 \section{Introduction to Cryptography}
 The written word is the most important invention in human history. However, as long as humans can share information, they also need to hide information. This has led to the invention of cryptography.\\
-The word cryptography comes from Greek which means "hidden writing". According to Wikipedia \cite{enwiki:1083919625}, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
+The word cryptography comes from Greek which means “hidden writing.” According to Wikipedia \cite{enwiki:1083919625}, \textbf{Cryptography, or cryptology, is the practice and study of techniques for secure communication in the presence of adversarial behavior.}
 \\Some of the application of Cryptography includes:
 \begin{itemize}
 	\item \textbf{End-to-end Encryption} for e-mail, messaging apps, GSM phones.
@@ -440,7 +440,7 @@ Let $n=n_0+2n_1+2^2n_2+...+2^mn_m$ where $n_0,...n_m \in \{0,1\}$\\$m =\lfloor \
 	\item return result
 \end{enumerate}
 \subsection{Hasse's Theorem}
-Hasse's theorem estimates the number of points in an elliptic curve over a finite field. We state Hasse's theorem without proof.
+Hasse’s theorem estimates the number of points in an elliptic curve over a finite field. We state Hasse’s theorem without proof.
 \begin{theorem}
 	Let $N$ is the number of points on an Elliptic Curve $E$ over finite field $F_q$. Then the following inequality is true
 	$$|N-(q+1)|<2\sqrt{q}$$
@@ -460,7 +460,9 @@ List 2: $n_1 P + Q, n_2 P + Q, . . ., n_r P + Q$\\
 As soon as we find $m_u P$ and $m_v P + Q$ such that $m_u P = m_v P + Q$, then $Q = (m_v - m_u) P $ i.e. $n=m_v - m_u$. Time complexity of collision search method is $O(\sqrt{p})$ by the birthday paradox\cite{hoffstein2008introduction}.\\\\
 The value of $p$ is taken very large for practical purpose. For example, Secp256k1 is the name of the elliptic curve used by Bitcoin to implement its public key cryptography. The value of $p$ used by it is $p = 2^{256} – 2^{32} – 2^9 – 2^8 – 2^7 – 2^6 – 2^4 – 1$.
 \cleardoublepage
-\section{Elliptic Diﬃe–Hellman key exchange}
+\chapter{Elliptic Curve Cryptography}
+In this chapter, Elliptic Diﬃe–Hellman key exchange and ElGamal Elliptic Curve Cryptosystem are discussed. The former algorithm is used to securely exchange keys between two parties. The message can then later be exchanged by using symmetric cryptography. The latter algorithm is used to exchange messages between two parties and is an example of asymmetric cryptography. 
+\section{Elliptic Diﬃe–Hellman key exchange }
 The biggest problem of symmetric cryptography is sharing of private keys. Historically secret key used to be shared physically. After that, public channels were used to share the encrypted message. Diffie-Hellman key exchange helps the sender and receiver of the message to exchange cryptographic keys over a public channel securely. Its security does depend on mathematical principles. \\\\
 Elliptic Diﬃe-Hellman Key Exchange Algorithm
 \begin{enumerate}
@@ -486,22 +488,20 @@ Shayam computes $n_S Q_R= 3 (2,4) = (6,0)$\\
 Ram and Shayam have shared the secret key $(6,0)$. They will use x-coordinate as the shared key and ignore y-coordinate.
 \section{ElGamal Elliptic Curve Cryptosystem}
 ElGamal Elliptic Curve Cryptosystem is an example of asymmetric key cryptography. It is similar to the Diffie-Hellman key exchange algorithm but is used securely to exchange messages over the public channel. Now let us look at the example where Shayam wants to share a message with Ram using ElGamal Elliptic Curve Cryptosystem.
-\cleardoublepage
-ElGamal Elliptic Curve Cryptosystem
 \begin{enumerate}
 \item A large prime number $p$, an Elliptic Curve $E$ over $F_p$ and a point $P \in E(F_p)$  is shared between Ram and Shayam over a public channel.
- \item Ram chooses a large secret random number $n_R$ and computes $Q_R = n_R P$. $Q_R$ is Ram's public key.  
+ \item Ram chooses a large secret random number $n_R$ and computes $Q_R = n_R P$. $Q_R$ is Ram’s public key.  
  \item Shayam chooses a plain text $M$ such that $M \in E(F_p)$.
  \item Shayam chooses a transitory key $k\in \mathbb{Z}$ and computes and shares $X_1$ and $X_2$ with Ram
  $$X_1 = k P$$
  $$X_2 = M+k Q_R$$
  \item Ram will obtain $M$ from $n_R$, $X_1$ and $X_2$ using the formula given below
  $$X_2-n_R X_1=M+k Q_R- n_R (k P)=M$$
- One of the drawbacks of this method is to attach plain text to a point in $ E(F_p)$. One of the proposed solutions for this is to use a probabilistic algorithm for this with a small chance of failure. Let's say you need to encrypt a text file. The proposed solution is taken from \cite{7033751}. Because each point on the elliptic curve could be directly transferred to an ASCII value, pick a Elliptic curve with a minimum of 128 points (because there are 8-bits in the ASCII character) so that we can assign an ASCII value to each point. For example, MATHS can be written as
-sequence of ASCII characters that is ‘77’ ‘65’ ‘84’ ‘72’ ‘83’
+ One of the drawbacks of this method is to attach plain text to a point in $ E(F_p)$. One of the proposed solutions for this is to use a probabilistic algorithm for this, which has a small chance of failure. Let’s say you need to encrypt a text file. (The proposed solution is taken from \cite{7033751}) Because each point on the elliptic curve could be directly transferred to an ASCII value, pick an Elliptic curve with a minimum of 128 points (because there are 8-bits in the ASCII character) so that we can assign an ASCII value to each point. For example, MATHS can be written as
+the sequence of ASCII characters is ‘77’ ‘65’ ‘84’ ‘72’ ‘83.’
 \end{enumerate}
 \cleardoublepage
-\chapter{Implementation}
+\chapter{Practical Application and Implementation}
 This chapter deals with the implementation of ECC using javascript. 
 \\\\
 \begin{lstlisting}[language=JavaScript]
@@ -589,10 +589,18 @@ console.log(ec.points);
 console.log(ec.doubleAndAddAlgorithm(5, [2, 4]));
 
 \end{lstlisting}
-
+\chapter{Conclusion}
+\begin{enumerate}
+\item The first chapter discusses the pre-requisite for Elliptic curve cryptography. We revisited the definition of group, ring, and field and looked into Fermat’s Little Theorem.
+\item The second chapter briefly introduces symmetric and asymmetric cryptography. Then Elliptic Curves are introduced along with basic theorems associated with it.
+\item The third chapter discusses the algorithms such as Elliptic Diffie-Hellman Key Exchange and ElGamal Elliptic Curve Cryptosystem. Elliptic Curves guarantee the security of these algorithms.
+\item The fourth chapter introduces the practical applications in blockchain technology and implementation of Elliptic Curves in javascript.
+\end{enumerate}
 \bibliographystyle{plain}
 \bibliography{bibliography}
 \end{document}
+
+
 
 
 
